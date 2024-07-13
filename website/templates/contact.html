@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Datacon.org.mx - Contact Us{% endblock %}
+
+{% block content %}
+<section id="contact-showcase" style="background-image: url('{% static 'images/test_1.jpg' %}');">
+    <div class="container-contact">
+        {% if messages %}
+        <div class="messages">
+            {% for message in messages %}
+            <div{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        <h1>Contact Us</h1>
+        <p>Get in Touch for Transformative Solutions - Anywhere in the World</p>
+    </div>
+</section>
+
+<div class="container-contact">
+    <section id="global-capabilities" class="contact-section">
+        <h2>Our Global Reach</h2>
+        <div class="capabilities-grid">
+            <div class="capability-card">
+                <i class="fas fa-globe"></i>
+                <h3>Worldwide Services</h3>
+                <p>We serve clients globally, transforming operations through innovative data solutions.</p>
+            </div>
+            <div class="capability-card">
+                <i class="fas fa-language"></i>
+                <h3>Multilingual Expertise</h3>
+                <p>Our diverse team communicates seamlessly with clients across languages and cultures.</p>
+            </div>
+            <div class="capability-card">
+                <i class="fas fa-tasks"></i>
+                <h3>Simultaneous Project Management</h3>
+                <p>We efficiently handle multiple projects concurrently, ensuring quality and timeliness.</p>
+            </div>
+        </div>
+    </section>
+
+    {% if messages %}
+    <div class="datacon-message-container">
+        {% for message in messages %}
+            <div class="datacon-message {% if message.tags %}datacon-message-{{ message.tags }}{% endif %}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <div class="contact-flex-container">
+        <section id="contact-form" class="contact-section">
+            <h2>Send Us a Message</h2>
+            <form class="contact-form" method="post">
+                {% csrf_token %}
+                {% for field in form %}
+                    <div class="form-group">
+                        {{ field }}
+                        {% if field.errors %}
+                            <div class="error">{{ field.errors }}</div>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </section>
+
+        <section id="contact-info" class="contact-section">
+            <h2>Contact Information</h2>
+            <div class="contact-info-grid">
+                <div class="contact-info-item">
+                    <i class="fas fa-envelope"></i>
+                    <div class="contact-info-content">
+                        <h3>Email</h3>
+                        <p>info@Datacon.org.mx</p>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <i class="fas fa-clock"></i>
+                    <div class="contact-info-content">
+                        <h3>Business Hours</h3>
+                        <p>Available 24/7 for online consultations</p>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <i class="fas fa-globe"></i>
+                    <div class="contact-info-content">
+                        <h3>Remote Services</h3>
+                        <p>We provide services worldwide via remote collaboration</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+{% endblock %}

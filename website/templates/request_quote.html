@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Datacon.org.mx - Request a Quote{% endblock %}
+
+{% block content %}
+<section id="quote-showcase" style="background-image: url('{% static 'images/test_29.jpg' %}');">
+    <div class="container-quote-1">
+        <h1>Request a Quote</h1>
+        <p>Get a Customized Solution for Your Business Needs</p>
+    </div>
+</section>
+
+<div class="container-quote-2">
+    <section id="quote-intro" class="quote-section">
+        <h2>Tailored Solutions for Your Business</h2>
+        <p>At Datacon.org.mx, we understand that every business is unique. That's why we offer customized solutions tailored to your specific needs. To provide you with an accurate quote, please fill out the form below with as much detail as possible about your project or requirements.</p>
+    </section>
+
+
+    <section id="quote-process" class="quote-section">
+        <h2>Our Quote Process</h2>
+        <div class="process-steps">
+            <div class="process-step">
+                <div class="step-number">1</div>
+                <p>We review your quote request within 1-2 business days.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">2</div>
+                <p>Our team may reach out for additional information if needed.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">3</div>
+                <p>We prepare a detailed, customized quote based on your requirements.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">4</div>
+                <p>You'll receive the quote via email, typically within 3-5 business days.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">5</div>
+                <p>We schedule a follow-up call to discuss the quote and answer any questions.</p>
+            </div>
+        </div>
+        <p class="process-note">We're committed to providing you with an accurate and comprehensive quote to ensure we meet your specific needs and expectations.</p>
+    </section>
+
+    {% if messages %}
+    <div class="datacon-message-container">
+        {% for message in messages %}
+            <div class="datacon-message {% if message.tags %}datacon-message-{{ message.tags }}{% endif %}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <section id="quote-form" class="quote-section">
+        <h2>Quote Request Form</h2>
+        <form class="quote-form" method="post">
+            {% csrf_token %}
+            {% for field in form %}
+                <div class="form-group">                  
+                    {{ field }}
+                    {% if field.errors %}
+                        <div class="error">{{ field.errors }}</div>
+                    {% endif %}
+                </div>
+            {% endfor %}
+            <button type="submit" class="submit-btn">Submit Quote Request</button>
+        </form>
+    </section>
+</div>
+{% endblock %}

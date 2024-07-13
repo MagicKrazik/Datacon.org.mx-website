@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Datacon.org.mx.mx - Our Services{% endblock %}
+
+{% block content %}
+    <section id="showcase-services" style="background-image: url('{% static 'images/test_5.jpg' %}');">
+        <div class="container-services">
+            <h1>Our Services</h1>
+            <p>Transforming businesses through automation, digitalization, and data-driven insights</p>
+        </div>
+    </section>
+
+    <section id="overview - services">
+        <div class="container-services">
+            <h2>Overview</h2>
+            <h3>At Datacon.org.mx, we offer a unique blend of financial acumen and technological expertise to drive your business forward. Our founder's background in economics, finance, accounting, and Software development allows us to provide holistic solutions that not only streamline your operations but also enhance your financial decision-making processes. We specialize in transforming small and medium-sized companies through automation, digitalization, and data-driven insights.</h3>
+        </div>
+    </section>
+
+    <div class="container-services">
+        <section id="services-services">
+            <h2>Key Services</h2>
+            <ul class="services-list-services">
+                <!-- Services list remains the same -->
+                <li>
+                    <h3>1. Customized Web Application Development</h3>
+                    <ul>
+                        <li>Design and implement tailored solutions for your specific business needs</li>
+                        <li>Create user-friendly interfaces and robust backend systems</li>
+                        <li>Ensure seamless integration with existing software and databases</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>2. Workflow Optimization</h3>
+                    <ul>
+                        <li>Analyze and streamline business processes for maximum efficiency</li>
+                        <li>Automate repetitive tasks and reduce manual errors</li>
+                        <li>Implement best practices for improved productivity and cost savings</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>3. Data Centralization and Management</h3>
+                    <ul>
+                        <li>Develop centralized data warehouses for unified information access</li>
+                        <li>Implement data governance and security measures</li>
+                        <li>Create APIs for seamless integration with existing systems</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>4. Process Automation</h3>
+                    <ul>
+                        <li>Streamline accounting and financial reporting processes</li>
+                        <li>Automate budgeting and forecasting</li>
+                        <li>Implement automated financial controls and compliance measures</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>5. Business Intelligence and Analytics</h3>
+                    <ul>
+                        <li>Develop tailored dashboards and visualizations</li>
+                        <li>Create dynamic financial models and scenario analysis tools</li>
+                        <li>Implement predictive analytics for business forecasting</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>6. In-house Software Development</h3>
+                    <ul>
+                        <li>Build custom software solutions tailored to your unique requirements</li>
+                        <li>Provide ongoing support and maintenance for developed applications</li>
+                        <li>Ensure scalability and future-proofing of your software investments</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>7. Digital Transformation Consulting</h3>
+                    <ul>
+                        <li>Assess current processes and recommend digitalization strategies</li>
+                        <li>Develop roadmaps for technology adoption</li>
+                        <li>Provide training and support for digital transformation initiatives</li>
+                    </ul>
+                </li> 
+            </ul>
+        </section>
+
+        <section id="benefits-services">
+            <h2>Benefits of Our Services</h2>
+            <ul class="benefits-list-services">
+                <!-- Benefits list remains the same -->
+                <li>Increased operational efficiency and reduced costs</li>
+                <li>Enhanced financial visibility and control</li>
+                <li>Data-driven decision making capabilities</li>
+                <li>Improved accuracy in financial forecasting and planning</li>
+                <li>Scalable solutions that grow with your business</li>
+                <li>Competitive advantage through cutting-edge technology adoption</li> 
+            </ul>
+        </section>    
+
+        <section id="cta-services" style="background-image: url('{% static 'images/test_19.jpg' %}'); background-size: cover; background-position: center center;">
+            <div class="container-services">
+            <h2>Ready to Transform Your Business?</h2>
+            <h3>Let's discuss how our services can drive your success.</h3>
+            <a href="{% url 'request_quote' %}" class="cta-button">Get a Free Consultation</a>
+            </div>
+        </section>  
+    </div>
+{% endblock %}

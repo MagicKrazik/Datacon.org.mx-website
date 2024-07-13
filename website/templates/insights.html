@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Datacon.org.mx - Insights{% endblock %}
+
+{% block extra_css %}
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+{% endblock %}
+
+{% block content %}
+    <section id="showcase-insights" style="background-image: url('{% static 'images/test_6.jpg' %}');">
+        <div class="container-insights">
+            <h1>Insights</h1>
+            <p>Stay Ahead with Expert Analysis and Industry Trends</p>
+        </div>
+    </section>
+
+    {% if messages %}
+    <div class="messages-container-insights">
+        {% for message in messages %}
+        <div class="message {% if message.tags %}{{ message.tags }}{% endif %}">
+            {{ message }}
+            <button class="close-message">&times;</button>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <div class="container-insights">
+        <section id="intro" class="insights-section">
+            <h2>Datacon.org.mx Insights</h2>
+            <!-- Intro content here -->
+            <p>Stay ahead of the curve with Datacon.org.mx's latest insights, trends, and expert analysis. Our team of finance and technology specialists regularly shares valuable content to help you navigate the ever-evolving landscape of digital transformation and data-driven decision making.</p> 
+        </section>
+
+        <section id="latest-articles" class="insights-section">
+            <h2>Latest Articles</h2>
+            <!-- Article grid here -->
+            <div class="article-grid">
+                <div class="article-card">
+                    <div class="article-image" style="background-image: url('{% static 'images/test_3.jpg' %}');"></div>
+                    <div class="article-content">
+                        <h3><a href="#">The Future of Financial Forecasting: How AI is Revolutionizing Business Planning</a></h3>
+                        <p>In this in-depth article, we explore how artificial intelligence is transforming financial forecasting, enabling businesses to make more accurate predictions and better-informed decisions.</p>
+                        <p class="read-time">Read time: 8 minutes</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </div>
+                <div class="article-card">
+                    <div class="article-image" style="background-image: url('{% static 'images/test_37.jpg' %}');"></div>
+                    <div class="article-content">
+                        <h3><a href="#">Unlocking the Power of Big Data in Small Businesses</a></h3>
+                        <p>Discover how small businesses can harness the potential of big data analytics to drive growth and innovation. We'll explore practical strategies, affordable tools, and real-world case studies.</p>
+                        <p class="read-time">Read time: 10 minutes</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </div>
+                <div class="article-card">
+                    <div class="article-image" style="background-image: url('{% static 'images/test_38.jpg' %}');"></div>
+                    <div class="article-content">
+                        <h3><a href="#">The Rise of No-Code Platforms: Empowering Non-Technical Teams</a></h3>
+                        <p>Explore the growing trend of no-code platforms and how they're enabling non-technical teams to create powerful business applications. Learn about the benefits, limitations, and best practices.</p>
+                        <p class="read-time">Read time: 7 minutes</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </div>
+            </div> 
+        </section>
+
+        <section id="resources-insights" class="insights-section">
+            <h2>Resources</h2>
+            <!-- Resource grid here -->
+            <div class="resource-grid">
+                <div class="resource-item">
+                    <i class="fas fa-file-alt"></i>
+                    <h3>Whitepapers</h3>
+                    <p>In-depth analysis and research on key industry topics.</p>
+                </div>
+                <div class="resource-item">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Case Studies</h3>
+                    <p>Real-world examples of successful digital transformations.</p>
+                </div>
+                <div class="resource-item">
+                    <i class="fas fa-video"></i>
+                    <h3>Webinars</h3>
+                    <p>Interactive online sessions with industry experts.</p>
+                </div>
+                <div class="resource-item">
+                    <i class="fas fa-chart-pie"></i>
+                    <h3>Infographics</h3>
+                    <p>Visual representations of complex data and trends.</p>
+                </div>
+            </div>
+            <p><em>Coming Soon! Check back regularly for updates.</em></p> 
+        </section>
+    </div>
+{% endblock %}
+
+{% block extra_js %}
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.close-message').forEach(function(button) {
+            button.addEventListener('click', function() {
+                this.closest('.message').remove();
+            });
+        });
+    });
+    </script>
+{% endblock %}

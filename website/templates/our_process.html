@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Datacon.org.mx - Our Process{% endblock %}
+
+{% block content %}
+    <section id="showcase-process" style="background-image: url('{% static 'images/test_21.jpg' %}');">
+        <div class="container-process-1">
+            <h1>Our Process</h1>
+            <p>Collaborative, Transparent, and Results-Driven Approach</p>
+        </div>
+    </section>
+
+    <div class="container-process-2">
+        <section id="intro-process">
+            <h2>Our Approach</h2>
+            <p>At Datacon.org.mx, we believe in a collaborative, transparent, and results-driven approach. Our process is designed to ensure that we fully understand your business needs, deliver tailored solutions, and provide ongoing support for your success.</p>
+        </section>
+
+        <section id="process-steps">
+            <!-- Process steps remain the same -->
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Initial Consultation and Needs Assessment</h3>
+                    <ul>
+                        <li>In-depth discussion of your business goals and challenges</li>
+                        <li>Review of current processes, systems, and pain points</li>
+                        <li>Preliminary analysis of potential areas for improvement</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Financial and Technological Audit</h3>
+                    <ul>
+                        <li>Comprehensive review of your financial processes and systems</li>
+                        <li>Assessment of your current technological infrastructure</li>
+                        <li>Identification of opportunities for automation and optimization</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Solution Design and Proposal</h3>
+                    <ul>
+                        <li>Development of a customized solution blueprint</li>
+                        <li>Creation of a detailed project plan and timeline</li>
+                        <li>Presentation of cost-benefit analysis and ROI projections</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>Agile Development and Implementation</h3>
+                    <ul>
+                        <li>Iterative development process with regular client check-ins</li>
+                        <li>Continuous testing and quality assurance</li>
+                        <li>Phased implementation to minimize disruption to your operations</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">5</div>
+                <div class="step-content">
+                    <h3>Training and Integration</h3>
+                    <ul>
+                        <li>Comprehensive training for your team on new systems and processes</li>
+                        <li>Seamless integration with existing workflows and technologies</li>
+                        <li>Development of custom user guides and documentation</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">6</div>
+                <div class="step-content">
+                    <h3>Ongoing Support and Optimization</h3>
+                    <ul>
+                        <li>Regular check-ins and performance reviews</li>
+                        <li>Continuous optimization based on user feedback and new technologies</li>
+                        <li>Scalable support to accommodate your growing business needs</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">7</div>
+                <div class="step-content">
+                    <h3>Future Planning and Strategy</h3>
+                    <ul>
+                        <li>Periodic strategic reviews to align with your evolving business goals</li>
+                        <li>Recommendations for future enhancements and upgrades</li>
+                        <li>Proactive identification of new opportunities for automation and efficiency</li>
+                    </ul>
+                </div>
+            </div>
+        </section> 
+
+        <section id="cta-process" style="background-image: url('{% static 'images/test_27.jpg' %}'); background-size: cover; background-position: center center;">
+            <div class="container-process-3">
+            <h2>Flexible Approach</h2>
+            <h3>Our process is flexible and can be tailored to meet the specific needs of your business. We're committed to delivering not just a product, but a transformative solution that drives your business forward.</h3>
+            <a href="{% url 'request_quote' %}" class="cta-button">Begin Your Transformation</a>
+            </div>
+        </section>
+    </div>
+{% endblock %}

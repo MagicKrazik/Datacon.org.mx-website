@@ -1,0 +1,91 @@
+/* dashboard.css */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    color: #006B31;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.table-responsive {
+    overflow-x: auto;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #333;
+}
+
+th {
+    background-color: #006B31;
+    color: white;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #2a2a2a;
+}
+
+tr:hover {
+    background-color: #3a3a3a;
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination .step-links {
+    display: inline-block;
+}
+
+.pagination a {
+    color: #006B31;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    border: 1px solid #006B31;
+    margin: 0 4px;
+    display: inline-block;
+}
+
+.pagination a:hover {
+    background-color: #006B31;
+    color: white;
+}
+
+.pagination .current {
+    background-color: #006B31;
+    color: white;
+    padding: 8px 16px;
+    border: 1px solid #006B31;
+    display: inline-block;
+}
+
+@media screen and (max-width: 600px) {
+    table {
+        font-size: 14px;
+    }
+    
+    th, td {
+        padding: 8px;
+    }
+    
+    .pagination a, .pagination .current {
+        padding: 6px 12px;
+    }
+}

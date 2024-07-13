@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Datacon.org.mx - Frequently Asked Questions{% endblock %}
+
+{% block content %}
+    <section id="showcase-faq" style="background-image: url('{% static 'images/test_26.jpg' %}');">
+        <div class="container-faq">
+            <h1>Frequently Asked Questions</h1>
+            <p>Get Answers to Common Questions About Our Services</p>
+        </div>
+    </section>
+
+    <div class="container-faq">
+        <section id="faq-intro" class="faq-section">
+            <h2>Have Questions? We've Got Answers</h2>
+            <p>At Datacon.org.mx, we believe in transparency and open communication. Here are answers to some of the most common questions we receive from potential clients. If you don't find the information you're looking for, please don't hesitate to <a href="{% url 'contact' %}">contact us</a>.</p>
+        </section>
+
+        <section id="faq-list" class="faq-section">
+            <!-- FAQ items here -->
+            <section id="faq-list" class="faq-section">
+                <div class="faq-item">
+                    <div class="faq-question">What makes Datacon.org.mx different from other consulting firms?</div>
+                    <div class="faq-answer">Datacon.org.mx uniquely combines deep financial expertise with cutting-edge technological skills. Our team's diverse background allows us to create truly customized solutions that address both the financial and operational aspects of your business. We don't just implement technology; we ensure it drives real financial results.</div>
+                </div>
+    
+                <div class="faq-item">
+                    <div class="faq-question">Do you work with businesses of all sizes?</div>
+                    <div class="faq-answer">Yes, we work with small, medium, and large businesses across various industries. Our solutions are scalable and can be tailored to meet the specific needs of your organization, regardless of its size.</div>
+                </div>
+    
+                <div class="faq-item">
+                    <div class="faq-question">How long does a typical project take?</div>
+                    <div class="faq-answer">Project duration varies depending on the scope and complexity of the solution. A small-scale automation project might take 4-6 weeks, while a comprehensive digital transformation could span several months. During our initial consultation, we'll provide a more accurate timeline based on your specific needs.</div>
+                </div>
+    
+                <div class="faq-item">
+                    <div class="faq-question">What industries do you specialize in?</div>
+                    <div class="faq-answer">We have experience across multiple industries, including but not limited to finance, retail, healthcare, construction, hospitality, and logistics. Our diverse expertise allows us to bring best practices from various sectors to your project.</div>
+                </div>
+    
+                <div class="faq-item">
+                    <div class="faq-question">How do you ensure the security of our data?</div>
+                    <div class="faq-answer">Data security is our top priority. We adhere to industry-standard security protocols and are prepared to sign Non-Disclosure Agreements (NDAs) when handling sensitive information. Our team is trained in data protection practices, and we implement robust security measures in all our solutions.</div>
+                </div>
+    
+                <div class="faq-item">
+                    <div class="faq-question">What kind of ROI can we expect from your services?</div>
+                    <div class="faq-answer">ROI varies by project, but our clients typically see significant improvements in efficiency, cost reduction, and revenue growth. For example, our automation solutions have resulted in up to 40% reduction in manual processes, and our BI tools have helped clients increase sales by 25% or more. We'll work with you to define clear, measurable KPIs for your project.</div>
+                </div>
+    
+                <div class="faq-item">
+                    <div class="faq-question">Do you provide ongoing support after project completion?</div>
+                    <div class="faq-answer">Absolutely. We offer various levels of ongoing support and maintenance to ensure your solution continues to perform optimally and evolve with your business needs. This can include regular check-ins, system updates, and continuous optimization.</div>
+                </div>
+    
+                <div class="faq-item">
+                    <div class="faq-question">How do you price your services?</div>
+                    <div class="faq-answer">Our pricing is project-based and depends on the scope, complexity, and duration of the engagement. We provide detailed, transparent quotes after our initial consultation and needs assessment. We're committed to delivering value and will work with you to find a solution that fits your budget.</div>
+                </div>
+    
+                <div class="faq-item">
+                    <div class="faq-question">Can you work with our existing systems?</div>
+                    <div class="faq-answer">Yes, we specialize in creating solutions that integrate seamlessly with your existing infrastructure. Whether you need to enhance current systems or build new ones, we ensure smooth integration and minimal disruption to your operations.</div>
+                </div>
+    
+                <div class="faq-item">
+                    <div class="faq-question">How do we get started?</div>
+                    <div class="faq-answer">Getting started is easy! Simply fill out our <a href="{% url 'request_quote' %}">'Request a Quote' form</a> or contact us directly. We'll schedule an initial consultation to discuss your needs, assess your current situation, and propose a tailored solution. There's no obligation, and we're always happy to answer any questions you might have.</div>
+                </div>
+            </section>
+
+        <section id="additional-questions" class="faq-section">
+            <h2>Still Have Questions?</h2>
+            <p>If you have any questions not addressed here, please don't hesitate to <a href="{% url 'contact' %}">contact us</a>. We're here to help you navigate your digital transformation journey.</p>
+        </section>
+    </div>
+{% endblock %}
+
+{% block extra_js %}
+    <script>
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', event => {
+                const answer = item.nextElementSibling;
+                if (answer.style.display === 'block') {
+                    answer.style.display = 'none';
+                } else {
+                    answer.style.display = 'block';
+                }
+            })
+        })
+    </script>
+{% endblock %}

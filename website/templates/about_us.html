@@ -1,0 +1,134 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Datacon.org.mx - About Us{% endblock %}
+
+{% block content %}
+    <section id="showcase-about" style="background-image: url('{% static 'images/test_4.jpg' %}');">
+        <div class="container-about-1">
+            <h1>About Datacon.org.mx</h1>
+            <p>Revolutionizing Business Through Data and Technology</p>
+        </div>
+    </section>
+
+    <div class="container-about-2">
+        <section id="our-story" class="about-section">
+            <h2>Our Story</h2>
+            <!-- Story content here -->
+            <p>Datacon.org.mx was born from a vision to revolutionize how small and medium-sized businesses leverage technology and data. Our founder's diverse background in economics, finance, accounting, and Python development laid the foundation for a unique approach to business consulting.</p>
+            <p>After years of working across various industries - from banking and corporate finance to fintech and logistics - our founder noticed a common thread: businesses were struggling with outdated processes, lack of data visibility, and ill-fitting technology solutions. This realization sparked the idea for Datacon.org.mx.</p> 
+        </section>
+
+        <section id="our-team" class="about-section">
+            <h2>Our Team</h2>
+            <!-- Team member information here -->
+            <p>At Datacon.org.mx, we've assembled a team of experts with deep knowledge in both finance and technology. This unique combination allows us to bridge the gap between business needs and technological solutions, providing our clients with unparalleled insights and innovative strategies.</p>
+            
+            <div class="team-member">
+                <img src="{% static 'images/carlos_olivares.jpg' %}" alt="Carlos Horacio Olivares" class="team-member-image">
+                <h3>Carlos Horacio Olivares</h3>
+                <p class="title">Founder and CEO</p>
+                <p class="bio">Carlos is the visionary founder and CEO of Datacon.org.mx. With a unique blend of financial expertise and advanced technical skills, he brings over 6 years of experience as a Python developer specializing in creating in-house software, automating processes, and delivering data-driven insights across various industries.</p>
+                <button class="read-more-btn">Read More</button>
+                <div class="member-details">
+                    <h4>Education:</h4>
+                    <ul>
+                        <li>Master in Accounting, Instituto Tecnológico Autónomo de México (ITAM)</li>
+                        <li>Master in Finance, Instituto Tecnológico Autónomo de México (ITAM)</li>
+                        <li>Bachelor's degree in Economics, Instituto Tecnológico Autónomo de México (ITAM)</li>
+                    </ul>
+                    <h4>Professional Background:</h4>
+                    <ul>
+                        <li>Sr. Data Analyst & Process Automation Specialist at KT&I Konstruktion Technologie & Innovation</li>
+                        <li>Sr. Strategy & Operations Manager at Nuvocargo</li>
+                        <li>Senior Consultant Corporate Finance at FTI Consulting</li>
+                        <li>Finance Python Developer at Producepay</li>
+                    </ul>
+                    <h4>Areas of Expertise:</h4>
+                    <ul>
+                        <li>Financial Process Automation</li>
+                        <li>Data Analysis and Business Intelligence</li>
+                        <li>Custom Software Development</li>
+                        <li>Process Optimization and Automation</li>
+                        <li>Corporate Finance and Turnaround Strategies</li>
+                    </ul>
+                    <h4>Notable Achievements:</h4>
+                    <ul>
+                        <li>Reduced complex commodity price calculation time from 4-6 hours to 15 minutes, a 95% reduction in processing time</li>
+                        <li>Implemented BI dashboards that improved decision-making processes and enabled data-driven strategies across multiple industries</li>
+                        <li>Developed custom software solutions that significantly enhanced operational efficiency in logistics and construction industries</li>
+                        <li>Led the implementation of cutting-edge communication technologies, resulting in a 25% reduction in response times to site issues in the construction industry</li>
+                    </ul>
+                    <h4>Languages:</h4>
+                    <ul>
+                        <li>Spanish (Native)</li>
+                        <li>English (Advanced)</li>
+                        <li>German (Advanced)</li>
+                    </ul>
+                    <blockquote>"In today's fast-paced business environment, the intersection of finance and technology is where true innovation happens. At Datacon.org.mx, we're committed to leveraging this powerful combination to help businesses achieve unprecedented growth, efficiency, and competitive advantage." - Carlos Horacio Olivares</blockquote>
+                </div>
+            </div> 
+        </section>
+
+        <section id="our-experience" class="about-section">
+            <h2>Our Experience</h2>
+            <!-- Experience content here -->
+            <p>Our team's experience spans a wide range of industries, giving us unique insights into the challenges faced by businesses across sectors.</p>
+            <div class="experience-grid">
+                <div class="experience-item">Banking and Financial Services</div>
+                <div class="experience-item">Corporate Finance Consulting</div>
+                <div class="experience-item">Construction and Real Estate</div>
+                <div class="experience-item">Retail and E-commerce</div>
+                <div class="experience-item">Pharmaceutical and Healthcare</div>
+                <div class="experience-item">Hospitality and Tourism</div>
+                <div class="experience-item">Aviation</div>
+                <div class="experience-item">Fintech</div>
+                <div class="experience-item">Logistics and Supply Chain</div>
+            </div> 
+        </section>
+
+        <section id="our-approach" class="about-section">
+            <h2>Our Approach</h2>
+            <!-- Approach content here -->
+            <p>At Datacon.org.mx, we believe in the power of customized solutions. We don't just sell software; we create tailored systems that seamlessly integrate with your existing workflows. Our approach is rooted in:</p>
+            <ol>
+                <li>Deep understanding of industry-specific challenges</li>
+                <li>Customization of solutions to fit unique business needs</li>
+                <li>Seamless integration of technology into existing processes</li>
+                <li>Data-driven decision making and analytics</li>
+                <li>Continuous innovation to keep our clients ahead of the curve</li>
+            </ol> 
+        </section>
+
+        <section id="why-choose-us" class="about-section">
+            <h2>Why Choose Datacon.org.mx?</h2>
+            <!-- Reasons to choose Datacon.org.mx here -->
+            <p>When you work with us, you're not just getting a service provider - you're gaining a partner committed to your success. We bring:</p>
+            <ol>
+                <li>A unique blend of financial acumen and technological expertise</li>
+                <li>Practical experience across multiple industries</li>
+                <li>A commitment to creating solutions that truly fit your business</li>
+                <li>A passion for driving innovation and efficiency</li>
+                <li>A focus on long-term partnerships and continuous improvement</li>
+            </ol>
+            <p>At Datacon.org.mx, we're not just building software - we're transforming businesses. Our team of financial and technology experts is ready to guide you on this journey of innovation, efficiency, and growth.</p> 
+        </section>
+    </div>
+{% endblock %}
+
+{% block extra_js %}
+    <script>
+        document.querySelectorAll('.read-more-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const details = this.nextElementSibling;
+                if (details.style.display === 'none' || details.style.display === '') {
+                    details.style.display = 'block';
+                    this.textContent = 'Read Less';
+                } else {
+                    details.style.display = 'none';
+                    this.textContent = 'Read More';
+                }
+            });
+        });
+    </script>
+{% endblock %}
