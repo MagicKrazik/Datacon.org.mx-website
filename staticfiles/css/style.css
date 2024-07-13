@@ -1656,35 +1656,6 @@ body {
     margin-bottom: 10px;
 }
 
-.newsletter-form {
-    display: flex;
-    gap: 15px;
-    margin-top: 25px;
-}
-
-.newsletter-form input[type="email"] {
-    flex-grow: 1;
-    padding: 12px 15px;
-    border: 1px solid var(--primary-color);
-    border-radius: 5px;
-    background-color: var(--bg-lighter);
-    color: var(--text-light);
-}
-
-.newsletter-form button {
-    padding: 12px 25px;
-    background-color: var(--primary-color);
-    color: var(--text-light);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.newsletter-form button:hover {
-    background-color: var(--secondary-color);
-}
-
 .messages-container-insights {
     width: 100%;
     padding: 15px;
