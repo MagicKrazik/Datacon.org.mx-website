@@ -44,9 +44,6 @@ def request_quote(request):
 def faq(request):
     return render(request, 'faq.html')
 
-def insights(request):
-    return render(request, 'insights.html')
-
 def solution_comparison(request):
     return render(request, 'solution_comparison.html')
 

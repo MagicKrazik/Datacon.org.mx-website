@@ -11,7 +11,6 @@ urlpatterns = [
     path('contact/', views.contact, name='contact'),
     path('request-quote/', QuoteRequestView.as_view(), name='request_quote'),
     path('faq/', views.faq, name='faq'),
-    path('insights/', views.insights, name='insights'),
     path('solution-comparison/', views.solution_comparison, name='solution_comparison'),
     path('login/', views.login_view, name='login'),
     path('logout/', views.logout_view, name='logout'),
