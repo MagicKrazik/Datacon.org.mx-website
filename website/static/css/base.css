@@ -1,0 +1,222 @@
+/* Base styles */
+:root {
+    --main-color: #006B31;
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --secondary-color: #1e1e1e;
+    --accent-color: #00a348;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Navbar styles */
+.navbar {
+    background: var(--secondary-color);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    max-width: 1300px;
+    margin: 0 auto;
+    height: 70px;
+}
+
+.navbar-logo {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.7rem;
+}
+
+.navbar-logo .highlight {
+    color: var(--main-color);
+}
+
+.navbar-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-link, .navbar-btn {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 0 15px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-size: 1rem;
+}
+
+.navbar-btn {
+    background: var(--main-color);
+    border-radius: 4px;
+    padding: 8px 15px;
+    margin-left: 15px;
+}
+
+.navbar-link:hover, .navbar-btn:hover {
+    color: var(--accent-color);
+}
+
+.navbar-dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--secondary-color);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-menu a {
+    color: var(--text-color);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-menu a:hover {
+    background-color: var(--main-color);
+}
+
+.navbar-toggle {
+    display: none;
+}
+
+/* Desktop styles */
+@media screen and (min-width: 961px) {
+    .navbar-dropdown:hover .dropdown-menu {
+        display: block;
+    }
+}
+
+/* Mobile styles */
+@media screen and (max-width: 960px) {
+    .navbar-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .navbar-logo {
+        flex-basis: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: var(--secondary-color);
+        position: absolute;
+        top: 90px;
+        left: 0;
+        padding: 20px 0;
+    }
+
+    .navbar-menu.active {
+        display: flex;
+    }
+
+    .navbar-link, .navbar-btn {
+        width: 100%;
+        padding: 15px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .navbar-btn {
+        margin: 15px 0;
+    }
+
+    .navbar-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px;
+        height: 21px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        position: absolute;
+        right: 20px;
+        top: 25px;
+    }
+
+    .navbar-toggle .bar {
+        width: 30px;
+        height: 3px;
+        background: var(--text-color);
+        transition: all 0.3s linear;
+    }
+
+    .navbar-toggle.active .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .navbar-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .navbar-toggle.active .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    .dropdown-menu {
+        position: static;
+        display: none;
+        width: 100%;
+        background-color: var(--bg-color);
+        box-shadow: none;
+    }
+
+    .navbar-dropdown.active .dropdown-menu {
+        display: block;
+    }
+
+    .navbar-dropdown > .navbar-link::after {
+        content: '\25BC';
+        font-size: 0.8em;
+        margin-left: 5px;
+    }
+
+    .navbar-dropdown.active > .navbar-link::after {
+        content: '\25B2';
+    }
+}
+
+/* Footer styles */
+footer {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}

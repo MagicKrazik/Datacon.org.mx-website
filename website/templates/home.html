@@ -3,48 +3,92 @@
 
 {% block title %}Datacon.org.mx - Data-Driven Business Transformation{% endblock %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+
 {% block content %}
-    <section id="showcase-home">
-        <div class="container-home">
-            <h1>Data-Driven Business Transformation</h1>
-            <p>Unlock valuable insights and streamline your workflows with our customized web applications.</p>
-            <h3>Automate Today, Dominate Tomorrow</h3>
-            <a href="{% url 'request_quote' %}" class="cta-button">Start Your Free Consultation</a>
-        </div>
-    </section>
-
+<section id="showcase-home" class="section">
+    <div class="showcase-overlay"></div>
     <div class="container-home">
-        <section id="main-home">
-            <h2>Welcome to Datacon.org.mx</h2>
-            <p>At Datacon.org.mx, we specialize in creating customized web applications that streamline workflows, centralize information, and unlock valuable insights for small and medium-sized businesses. Our tailored solutions are designed to boost your efficiency and professionalism, helping you scale your business to the next level.</p>
-            <p>Whether you're looking to optimize current operations or expand into new markets, Datacon.org.mx provides the technological edge you need to succeed in today's competitive landscape.</p>
-            <h4>At Datacon.org.mx, we turn complex data into simple, actionable solutions. Our custom web applications don't just organize your information—they revolutionize your business processes, giving you the competitive edge in today's fast-paced market.</h4>
-        </section>
+        <h1>Data-Driven Business Transformation</h1>
+        <h2>Unlock valuable insights and streamline your workflows</h2>
+        <h3>Automate Today, Dominate Tomorrow</h3>
+        <a href="{% url 'request_quote' %}" class="cta-button">Start Your Free Consultation</a>
     </div>
+</section>
 
-    <section id="key-services">
-        <div class="container-home">
-            <h2>Key Services</h2>
-            <ul class="services-list-home">
-                <li>Customized Web Application Development</li>
-                <li>Workflow Optimization</li>
-                <li>Data Centralization and Management</li>
-                <li>Process Automation</li>
-                <li>Business Intelligence and Analytics</li>
-                <li>In-house Software Development</li>
-            </ul>
-        </div>
-    </section>
-
+<section id="main-home" class="section">
     <div class="container-home">
-        <aside id="testimonial-home">
-            <h3>What Our Clients Say</h3>
-            <blockquote>"Datacon.org.mx transformed our business. Their custom web application streamlined our operations and increased our efficiency by 40%. They're not just service providers; they're true partners in our success."</blockquote>
-            <p>- Alejandro Flores, CEO & Founder, KT&I Konstruktion Technologie & Innovation</p>
-        </aside>
+        <h2>Welcome to Datacon.org.mx</h2>
+        <p>At Datacon.org.mx, we specialize in creating customized web applications that streamline workflows, centralize information, and unlock valuable insights for small and medium-sized businesses. Our tailored solutions are designed to boost your efficiency and professionalism, helping you scale your business to the next level.</p>
+        <p>Whether you're looking to optimize current operations or expand into new markets, Datacon.org.mx provides the technological edge you need to succeed in today's competitive landscape.</p>
+        <blockquote>
+            At Datacon.org.mx, we turn complex data into simple, actionable solutions. Our custom web applications don't just organize your information—they revolutionize your business processes, giving you the competitive edge in today's fast-paced market.
+        </blockquote>
     </div>
+</section>
+
+<section id="key-services" class="section">
+    <div class="container-home">
+        <h2>Key Services</h2>
+        <ul>
+            <li>
+                <h3>Customized Web Application Development</h3>
+                <p>Tailored solutions to meet your unique business needs and streamline operations.</p>
+            </li>
+            <li>
+                <h3>Workflow Optimization</h3>
+                <p>Enhance your business processes for maximum efficiency and productivity.</p>
+            </li>
+            <li>
+                <h3>Data Centralization and Management</h3>
+                <p>Consolidate and organize your data for better decision-making and insights.</p>
+            </li>
+            <li>
+                <h3>Process Automation</h3>
+                <p>Automate repetitive tasks to save time and reduce errors in your operations.</p>
+            </li>
+            <li>
+                <h3>Business Intelligence and Analytics</h3>
+                <p>Gain valuable insights from your data to drive strategic business decisions.</p>
+            </li>
+            <li>
+                <h3>In-house Software Development</h3>
+                <p>Custom software solutions developed to address your specific business challenges.</p>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section id="testimonial" class="section">
+    <div class="container-home">
+        <h2>What Our Clients Say</h2>
+        <blockquote>
+            <div class="testimonial-content">
+                "Datacon.org.mx transformed our business. Their custom web application streamlined our operations and increased our efficiency by 40%. They're not just service providers; they're true partners in our success."
+            </div>
+        </blockquote>
+        <p class="testimonial-author">- Alejandro Flores, CEO & Founder, KT&I Konstruktion Technologie & Innovation</p>
+    </div>
+</section>
 {% endblock %}
 
 {% block extra_js %}
-    <!-- Add any page-specific JavaScript here if needed -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const showcaseOverlay = document.querySelector('.showcase-overlay');
+    let opacity = 0.5; // Initial opacity
+
+    window.addEventListener('scroll', function() {
+        const scrollPosition = window.scrollY;
+        const maxScroll = 300; // Adjust this value to control the scroll range for opacity change
+        
+        if (scrollPosition <= maxScroll) {
+            opacity = 0.5 + (scrollPosition / maxScroll) * 0.3; // Adjust the 0.3 to control the maximum additional opacity
+            showcaseOverlay.style.backgroundColor = `rgba(0, 0, 0, ${opacity})`;
+        }
+    });
+});
+</script>
 {% endblock %}

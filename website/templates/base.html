@@ -5,70 +5,99 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Datacon.org.mx{% endblock %}</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% block extra_css %}{% endblock %}
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="navbar-container">
-                <a href="{% url 'home' %}" class="navbar-logo">Datacon<span class="highlight">.org.mx</span></a>
-                <div class="navbar-toggle" id="mobile-menu">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
+    <header class="navbar">
+        <div class="navbar-container">
+            <a href="{% url 'home' %}" class="navbar-logo">
+                Datacon<span class="highlight">.org.mx</span>
+            </a>
+
+            <button id="mobile-menu" class="navbar-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <nav class="navbar-menu">
+                <a href="{% url 'home' %}" class="navbar-link">Home</a>
+                <a href="{% url 'services' %}" class="navbar-link">Services</a>
+                <a href="{% url 'our_process' %}" class="navbar-link">Our Process</a>
+                <div class="navbar-dropdown">
+                    <a href="#" class="navbar-link dropdown-toggle">More</a>
+                    <div class="dropdown-menu">
+                        <a href="{% url 'client_success_stories' %}">Success Stories</a>
+                        <a href="{% url 'about_us' %}">About Us</a>
+                        <a href="{% url 'faq' %}">FAQ</a>
+                        <a href="{% url 'insights' %}">Insights</a>
+                        <a href="{% url 'solution_comparison' %}">Solution Comparison</a>
+                    </div>
                 </div>
-                <ul class="navbar-menu">
-                    <li><a href="{% url 'home' %}" class="navbar-link">Home</a></li>
-                    <li><a href="{% url 'services' %}" class="navbar-link">Services</a></li>
-                    <li><a href="{% url 'our_process' %}" class="navbar-link">Our Process</a></li>
-                    <li class="navbar-dropdown">
-                        <a href="#" class="navbar-link">More <span class="dropdown-arrow">▼</span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="{% url 'client_success_stories' %}">Success Stories</a></li>
-                            <li><a href="{% url 'about_us' %}">About Us</a></li>
-                            <li><a href="{% url 'faq' %}">FAQ</a></li>
-                            <li><a href="{% url 'insights' %}">Insights</a></li>
-                            <li><a href="{% url 'solution_comparison' %}">Solution Comparison</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="{% url 'contact' %}" class="navbar-link">Contact</a></li>
-                    <li><a href="{% url 'request_quote' %}" class="navbar-btn">Request a Quote</a></li>
-                    {% if user.is_authenticated %}
-                        <li><a href="{% url 'contact_submissions' %}" class="navbar-link">Contact Submissions</a></li>
-                        <li><a href="{% url 'quote_requests' %}" class="navbar-link">Quote Requests</a></li>
-                        <li>
-                            <form method="post" action="{% url 'logout' %}" style="display: inline;">
-                                {% csrf_token %}
-                                <button type="submit" class="navbar-link login-logout" style="background: none; border: none; cursor: pointer;">Log out</button>
-                            </form>
-                        </li>
-                    {% else %}
-                        <li><a href="{% url 'login' %}" class="navbar-link login-logout">Log in</a></li>
-                    {% endif %}
-                </ul>
-            </div>
-        </nav>
+                <a href="{% url 'contact' %}" class="navbar-link">Contact</a>
+                <a href="{% url 'request_quote' %}" class="navbar-btn">Request a Quote</a>
+                {% if user.is_authenticated %}
+                    <a href="{% url 'contact_submissions' %}" class="navbar-link">Contact Submissions</a>
+                    <a href="{% url 'quote_requests' %}" class="navbar-link">Quote Requests</a>
+                    <a href="#" class="navbar-link" id="logout-link">Log out</a>
+                    <form id="logout-form" method="post" action="{% url 'logout' %}" style="display: none;">
+                        {% csrf_token %}
+                    </form>
+                {% else %}
+                    <a href="{% url 'login' %}" class="navbar-link login-logout">Log in</a>
+                {% endif %}
+            </nav>
+        </div>
     </header>
 
-    <main>
+    <main role="main">
         {% if messages %}
-        <div class="messages">
-            {% for message in messages %}
-            <div{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</div>
-            {% endfor %}
-        </div>
+            <div class="messages">
+                {% for message in messages %}
+                    <div class="{{ message.tags }}">{{ message }}</div>
+                {% endfor %}
+            </div>
         {% endif %}
-
-        {% block content %}
-        <!-- Content for each page will go here -->
-        {% endblock %}
+        
+        {% block content %}{% endblock %}
     </main>
 
     <footer>
-        <p>&copy; 2024 Datacon.org.mx All rights reserved.</p>
+        © 2024 Datacon.org.mx All rights reserved.
     </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navbarMenu = document.querySelector('.navbar-menu');
+        const dropdowns = document.querySelectorAll('.navbar-dropdown');
+        const logoutLink = document.getElementById('logout-link');
+        const logoutForm = document.getElementById('logout-form');
+
+        mobileMenu.addEventListener('click', function() {
+            this.classList.toggle('active');
+            navbarMenu.classList.toggle('active');
+        });
+
+        dropdowns.forEach(dropdown => {
+            const dropdownToggle = dropdown.querySelector('.dropdown-toggle');
+            dropdownToggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                if (window.innerWidth <= 960) {
+                    dropdown.classList.toggle('active');
+                }
+            });
+        });
+
+        if (logoutLink && logoutForm) {
+            logoutLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                logoutForm.submit();
+            });
+        }
+    });
+    </script>
 
     {% block extra_js %}{% endblock %}
 </body>
