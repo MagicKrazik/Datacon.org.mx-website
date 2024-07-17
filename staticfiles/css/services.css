@@ -1,0 +1,236 @@
+/* Services page styles */
+:root {
+    --main-color: #006B31;
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --secondary-color: #1e1e1e;
+    --accent-color: #00a348;
+}
+
+.container-services {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    position: relative;
+    z-index: 2;
+}
+
+#showcase-services {
+    position: relative;
+    background-image: url('/static/images/test_5.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--text-color);
+    text-align: center;
+    padding: 8rem 1rem;
+    overflow: hidden;
+}
+
+.showcase-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+#showcase-services h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#showcase-services p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#overview-services {
+    background-color: var(--bg-color);
+    padding: 4rem 0;
+}
+
+#overview-services h2 {
+    color: var(--main-color);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+#overview-services h3 {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#services-services {
+    background-color: var(--secondary-color);
+    padding: 6rem 0;
+}
+
+#services-services h2 {
+    color: var(--main-color);
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+#services-services > .container-services > ul {
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+#services-services > .container-services > ul > li {
+    background-color: var(--bg-color);
+    border-radius: 8px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#services-services > .container-services > ul > li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+#services-services h3 {
+    color: var(--main-color);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+#services-services ul ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-top: 1rem;
+}
+
+#services-services ul ul li {
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+#benefits-services {
+    background-color: var(--bg-color);
+    padding: 6rem 0;
+}
+
+#benefits-services h2 {
+    color: var(--main-color);
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+#benefits-services ul {
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+#benefits-services li {
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#benefits-services li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+#cta-services {
+    position: relative;
+    background-image: url('/static/images/test_19.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--text-color);
+    text-align: center;
+    padding: 8rem 1rem;
+    overflow: hidden;
+}
+
+#cta-services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+#cta-services h3 {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--text-color);
+    color: var(--main-color);
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cta-button:hover {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    #showcase-services {
+        padding: 4rem 1rem;
+    }
+
+    #showcase-services h1 {
+        font-size: 2.2rem;
+    }
+
+    #showcase-services p {
+        font-size: 1rem;
+    }
+
+    #overview-services h2,
+    #services-services h2,
+    #benefits-services h2,
+    #cta-services h2 {
+        font-size: 2rem;
+    }
+
+    #overview-services h3,
+    #cta-services h3 {
+        font-size: 1rem;
+    }
+
+    #services-services > .container-services > ul,
+    #benefits-services ul {
+        grid-template-columns: 1fr;
+    }
+
+    #services-services h3 {
+        font-size: 1.3rem;
+    }
+
+    .cta-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}

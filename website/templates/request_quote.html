@@ -3,64 +3,100 @@
 
 {% block title %}Datacon.org.mx - Request a Quote{% endblock %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/request_quote.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+{% endblock %}
+
 {% block content %}
-<section id="quote-showcase">
-    <div class="container-quote-1">
-        <h1>Request a Quote</h1>
-        <p>Get a Customized Solution for Your Business Needs</p>
+<section id="quote-showcase" class="section">
+    <div class="showcase-overlay"></div>
+    <div class="container">
+        <h1>Request a Personalized Quote</h1>
+        <p>Unlock the Power of Data-Driven Solutions for Your Business</p>
     </div>
 </section>
 
-<div class="container-quote-2">
-    <section id="quote-intro" class="quote-section">
-        <h2>Tailored Solutions for Your Business</h2>
-        <p>At Datacon.org.mx, we understand that every business is unique. That's why we offer customized solutions tailored to your specific needs. To provide you with an accurate quote, please fill out the form below with as much detail as possible about your project or requirements.</p>
-    </section>
+<section id="quote-benefits" class="section">
+    <div class="container">
+        <h2>Why Choose Datacon.org.mx?</h2>
+        <div class="benefits-grid">
+            <div class="benefit-item">
+                <i class="fas fa-chart-line"></i>
+                <h3>Tailored Solutions</h3>
+                <p>Custom-built applications designed specifically for your business needs</p>
+            </div>
+            <div class="benefit-item">
+                <i class="fas fa-cogs"></i>
+                <h3>Streamlined Processes</h3>
+                <p>Optimize your workflows and increase operational efficiency</p>
+            </div>
+            <div class="benefit-item">
+                <i class="fas fa-lightbulb"></i>
+                <h3>Data-Driven Insights</h3>
+                <p>Make informed decisions with powerful analytics and reporting</p>
+            </div>
+            <div class="benefit-item">
+                <i class="fas fa-users"></i>
+                <h3>Expert Team</h3>
+                <p>Benefit from our experienced professionals in finance and technology</p>
+            </div>
+        </div>
+    </div>
+</section>
 
-
-    <section id="quote-process" class="quote-section">
-        <h2>Our Quote Process</h2>
-        <div class="process-steps">
+<section id="quote-process" class="section">
+    <div class="container">
+        <h2>Our Simple Quote Process</h2>
+        <div class="process-timeline">
             <div class="process-step">
                 <div class="step-number">1</div>
-                <p>We review your quote request within 1-2 business days.</p>
+                <div class="step-content">
+                    <h3>Submit Request</h3>
+                    <p>Fill out our detailed form with your project requirements</p>
+                </div>
             </div>
             <div class="process-step">
                 <div class="step-number">2</div>
-                <p>Our team may reach out for additional information if needed.</p>
+                <div class="step-content">
+                    <h3>Initial Review</h3>
+                    <p>Our team analyzes your needs within 1-2 business days</p>
+                </div>
             </div>
             <div class="process-step">
                 <div class="step-number">3</div>
-                <p>We prepare a detailed, customized quote based on your requirements.</p>
+                <div class="step-content">
+                    <h3>Quote Preparation</h3>
+                    <p>We create a customized quote based on your requirements</p>
+                </div>
             </div>
             <div class="process-step">
                 <div class="step-number">4</div>
-                <p>You'll receive the quote via email, typically within 3-5 business days.</p>
+                <div class="step-content">
+                    <h3>Quote Delivery</h3>
+                    <p>Receive your detailed quote via email within 3-5 business days</p>
+                </div>
             </div>
             <div class="process-step">
                 <div class="step-number">5</div>
-                <p>We schedule a follow-up call to discuss the quote and answer any questions.</p>
+                <div class="step-content">
+                    <h3>Follow-Up</h3>
+                    <p>We schedule a call to discuss the quote and answer your questions</p>
+                </div>
             </div>
         </div>
-        <p class="process-note">We're committed to providing you with an accurate and comprehensive quote to ensure we meet your specific needs and expectations.</p>
-    </section>
-
-    {% if messages %}
-    <div class="datacon-message-container">
-        {% for message in messages %}
-            <div class="datacon-message {% if message.tags %}datacon-message-{{ message.tags }}{% endif %}">
-                {{ message }}
-            </div>
-        {% endfor %}
     </div>
-    {% endif %}
+</section>
 
-    <section id="quote-form" class="quote-section">
-        <h2>Quote Request Form</h2>
-        <form class="quote-form" method="post">
+<section id="quote-form" class="section">
+    <div class="container">
+        <h2>Get Your Personalized Quote</h2>
+        <p class="form-intro">Fill out the form below, and we'll create a tailored solution just for you.</p>
+        <form method="post" class="quote-request-form">
             {% csrf_token %}
             {% for field in form %}
-                <div class="form-group">                  
+                <div class="form-group">
+                    <label for="{{ field.id_for_label }}">{{ field.label }}</label>
                     {{ field }}
                     {% if field.errors %}
                         <div class="error">{{ field.errors }}</div>
@@ -69,6 +105,16 @@
             {% endfor %}
             <button type="submit" class="submit-btn">Submit Quote Request</button>
         </form>
-    </section>
+    </div>
+</section>
+
+{% if messages %}
+<div class="datacon-message-container">
+    {% for message in messages %}
+        <div class="datacon-message {% if message.tags %}datacon-message-{{ message.tags }}{% endif %}">
+            {{ message }}
+        </div>
+    {% endfor %}
 </div>
+{% endif %}
 {% endblock %}

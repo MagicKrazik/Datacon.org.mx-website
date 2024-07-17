@@ -1,0 +1,144 @@
+/* Contact Submissions page styles */
+:root {
+    --main-color: #006B31;
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --secondary-color: #1e1e1e;
+    --accent-color: #00a348;
+    --table-header-bg: #004a22;
+    --table-row-hover: #2a2a2a;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 40px 0;
+}
+
+/* Header section */
+#submissions-header {
+    background-color: var(--secondary-color);
+    text-align: center;
+    padding: 60px 0;
+}
+
+#submissions-header h1 {
+    font-size: 2.5rem;
+    color: var(--main-color);
+    margin-bottom: 10px;
+}
+
+#submissions-header p {
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+/* Table styles */
+.table-responsive {
+    overflow-x: auto;
+}
+
+.submissions-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: var(--secondary-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.submissions-table th,
+.submissions-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--bg-color);
+}
+
+.submissions-table th {
+    background-color: var(--table-header-bg);
+    color: var(--text-color);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.submissions-table tr:hover {
+    background-color: var(--table-row-hover);
+}
+
+/* Pagination styles */
+.pagination {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.step-links {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.pagination-link {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 5px 10px;
+    margin: 0 5px;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+.pagination-link:hover {
+    background-color: var(--main-color);
+}
+
+.current-page {
+    color: var(--accent-color);
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    #submissions-header h1 {
+        font-size: 2rem;
+    }
+
+    #submissions-header p {
+        font-size: 1rem;
+    }
+
+    .submissions-table th,
+    .submissions-table td {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .pagination-link {
+        padding: 3px 6px;
+        margin: 0 2px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .submissions-table th,
+    .submissions-table td {
+        padding: 8px;
+        font-size: 0.8rem;
+    }
+
+    .pagination-link {
+        padding: 2px 4px;
+        margin: 0 1px;
+    }
+}

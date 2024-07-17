@@ -44,7 +44,7 @@ class QuoteRequestForm(forms.ModelForm):
 
     class Meta:
         model = QuoteRequest
-        fields = ['name', 'email', 'phone', 'company', 'industry', 'project_type', 'project_description', 'budget', 'timeline', 'services', 'additional_info']
+        fields = ['name', 'email', 'phone', 'company', 'industry', 'project_type', 'project_description', 'budget', 'timeline', 'additional_info']
         widgets = {
             'name': forms.TextInput(attrs={'placeholder': 'Your Name'}),
             'email': forms.EmailInput(attrs={'placeholder': 'Your Email'}),
@@ -53,7 +53,6 @@ class QuoteRequestForm(forms.ModelForm):
             'industry': forms.TextInput(attrs={'placeholder': 'Your Industry'}),
             'project_description': forms.Textarea(attrs={'placeholder': 'Describe your project'}),
             'timeline': forms.TextInput(attrs={'placeholder': 'e.g., 3 months, 6 months'}),
-            'services': forms.CheckboxSelectMultiple(),
             'additional_info': forms.Textarea(attrs={'placeholder': 'Any additional information'}),
         }
 

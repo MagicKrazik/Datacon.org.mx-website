@@ -1,0 +1,237 @@
+/* Solution Comparison page styles */
+:root {
+    --main-color: #006B31;
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --secondary-color: #1e1e1e;
+    --accent-color: #00a348;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+h2 {
+    color: var(--main-color);
+    margin-bottom: 20px;
+}
+
+/* Showcase section */
+#showcase-sol {
+    position: relative;
+    background-image: url('/static/images/test_31.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 150px 0;
+    color: var(--text-color);
+}
+
+.showcase-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#showcase-sol h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+#showcase-sol p {
+    font-size: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+
+/* Key Advantages */
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.advantage-item {
+    background-color: var(--secondary-color);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.advantage-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.advantage-item i {
+    font-size: 3rem;
+    color: var(--main-color);
+    margin-bottom: 20px;
+}
+
+.advantage-item h3 {
+    color: var(--accent-color);
+    margin-bottom: 15px;
+}
+
+/* CTA section */
+#cta-sol {
+    background-color: var(--secondary-color);
+    text-align: center;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--main-color);
+    color: var(--text-color);
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.cta-button:hover {
+    background-color: var(--accent-color);
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    .section {
+        padding: 60px 0;
+    }
+
+    #showcase-sol {
+        padding: 100px 0;
+    }
+
+    #showcase-sol h1 {
+        font-size: 2.5rem;
+    }
+
+    #showcase-sol p {
+        font-size: 1.2rem;
+    }
+
+    .advantages-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Comparison Section Styles */
+#comparison-section {
+    background-color: var(--bg-color);
+    padding: 80px 0;
+}
+
+#comparison-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--main-color);
+    font-size: 2.5rem;
+}
+
+.comparison-grid {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.comparison-header,
+.comparison-row {
+    display: flex;
+}
+
+.comparison-header {
+    background-color: var(--main-color);
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.comparison-cell {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.comparison-header .comparison-cell {
+    justify-content: center;
+}
+
+.comparison-row:nth-child(even) {
+    background-color: var(--secondary-color);
+}
+
+.comparison-row:nth-child(odd) {
+    background-color: rgba(30, 30, 30, 0.8);
+}
+
+.comparison-row:hover {
+    background-color: rgba(0, 107, 49, 0.1);
+}
+
+.comparison-cell:first-child {
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+.datacon i,
+.traditional i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.datacon i {
+    color: var(--accent-color);
+}
+
+.traditional i {
+    color: #ff4444;
+}
+
+@media screen and (max-width: 768px) {
+    .comparison-header,
+    .comparison-row {
+        flex-direction: column;
+    }
+
+    .comparison-cell {
+        padding: 15px;
+    }
+
+    .comparison-cell:first-child {
+        background-color: var(--main-color);
+        color: var(--text-color);
+    }
+
+    #comparison-section h2 {
+        font-size: 2rem;
+    }
+}

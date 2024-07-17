@@ -12,7 +12,6 @@ class QuoteRequest(models.Model):
        project_description = models.TextField()
        budget = models.CharField(max_length=50, blank=True)
        timeline = models.CharField(max_length=100, blank=True)
-       services = models.CharField(max_length=255, blank=True)  # Store as comma-separated values
        additional_info = models.TextField(blank=True)
        created_at = models.DateTimeField(auto_now_add=True)
 
