@@ -26,6 +26,7 @@
                         <th>Email</th>
                         <th>Phone</th>
                         <th>Company</th>
+                        <th>Message</th>
                         <th>Date</th>
                     </tr>
                 </thead>
@@ -36,6 +37,7 @@
                         <td>{{ contact.email }}</td>
                         <td>{{ contact.phone }}</td>
                         <td>{{ contact.company }}</td>
+                        <td>{{ contact.message }}</td>
                         <td>{{ contact.created_at|date:"M d, Y H:i" }}</td>
                     </tr>
                     {% endfor %}

@@ -1,65 +1,65 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}Datacon.org.mx - Contact Form Submissions{% endblock %}
+{% block title %}Datacon.org.mx - Quote Requests{% endblock %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'css/contact_submissions.css' %}">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+<link rel="stylesheet" href="{% static 'css/quote_requests.css' %}">
 {% endblock %}
 
 {% block content %}
-<section id="submissions-header" class="section">
-    <div class="container">
-        <h1>Contact Form Submissions</h1>
-        <p>Review and manage incoming contact requests</p>
+<div class="container">
+    <h1 class="page-title">Quote Requests</h1>
+
+    <div class="table-responsive">
+        <table class="quote-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Company</th>
+                    <th>Project Type</th>
+                    <th>Project Description</th>
+                    <th>Budget</th>
+                    <th>Timeline</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for quote in quotes %}
+                <tr>
+                    <td>{{ quote.name }}</td>
+                    <td>{{ quote.email }}</td>
+                    <td>{{ quote.phone }}</td>
+                    <td>{{ quote.company }}</td>
+                    <td>{{ quote.project_type }}</td>
+                    <td>{{ quote.project_description }}</td>
+                    <td>{{ quote.budget }}</td>
+                    <td>{{ quote.timeline }}</td>
+                    <td>{{ quote.created_at|date:"M d, Y H:i" }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
     </div>
-</section>
 
-<section id="submissions-table" class="section">
-    <div class="container">
-        <div class="table-responsive">
-            <table class="submissions-table">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Phone</th>
-                        <th>Company</th>
-                        <th>Date</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for contact in contacts %}
-                    <tr>
-                        <td>{{ contact.name }}</td>
-                        <td>{{ contact.email }}</td>
-                        <td>{{ contact.phone }}</td>
-                        <td>{{ contact.company }}</td>
-                        <td>{{ contact.created_at|date:"M d, Y H:i" }}</td>
-                    </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
-        </div>
+    <div class="pagination">
+        <span class="step-links">
+            {% if quotes.has_previous %}
+                <a href="?page=1" class="pagination-link">&laquo; first</a>
+                <a href="?page={{ quotes.previous_page_number }}" class="pagination-link">previous</a>
+            {% endif %}
 
-        <div class="pagination">
-            <span class="step-links">
-                {% if contacts.has_previous %}
-                    <a href="?page=1" class="pagination-link">&laquo; first</a>
-                    <a href="?page={{ contacts.previous_page_number }}" class="pagination-link">previous</a>
-                {% endif %}
-
-                <span class="current-page">
-                    Page {{ contacts.number }} of {{ contacts.paginator.num_pages }}
-                </span>
-
-                {% if contacts.has_next %}
-                    <a href="?page={{ contacts.next_page_number }}" class="pagination-link">next</a>
-                    <a href="?page={{ contacts.paginator.num_pages }}" class="pagination-link">last &raquo;</a>
-                {% endif %}
+            <span class="current">
+                Page {{ quotes.number }} of {{ quotes.paginator.num_pages }}.
             </span>
-        </div>
+
+            {% if quotes.has_next %}
+                <a href="?page={{ quotes.next_page_number }}" class="pagination-link">next</a>
+                <a href="?page={{ quotes.paginator.num_pages }}" class="pagination-link">last &raquo;</a>
+            {% endif %}
+        </span>
     </div>
-</section>
+</div>
 {% endblock %}
