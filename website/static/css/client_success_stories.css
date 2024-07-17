@@ -1,0 +1,247 @@
+/* Client Success Stories styles */
+:root {
+    --main-color: #006B31;
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --secondary-color: #1e1e1e;
+    --accent-color: #00a348;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Showcase section */
+#showcase-client {
+    position: relative;
+    background-image: url('/static/images/test_22.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 80px 0;
+    color: var(--text-color);
+}
+
+.showcase-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#showcase-client h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+#showcase-client p {
+    font-size: 1.2rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* Intro section */
+#intro-client {
+    background-color: var(--secondary-color);
+    padding: 60px 0;
+}
+
+#intro-client h2 {
+    color: var(--main-color);
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#intro-client p {
+    font-size: 1.1rem;
+}
+
+/* Success stories section */
+#success-stories {
+    padding: 60px 0;
+}
+
+.success-story-card {
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    margin-bottom: 40px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.success-story-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.story-header {
+    background-color: var(--main-color);
+    color: var(--text-color);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.story-header h3 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.industry {
+    font-size: 0.9rem;
+    background-color: black;
+    padding: 5px 10px;
+    border-radius: 20px;
+    display: flex;
+}
+
+.story-content {
+    padding: 30px;
+}
+
+.challenge-solution, .results-testimonial {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.challenge, .solution, .results, .testimonial {
+    flex: 1 1 100%;
+    padding: 15px;
+}
+
+.challenge h4, .solution h4, .results h4 {
+    color: var(--main-color);
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.story-content ul {
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.story-content li {
+    margin-bottom: 5px;
+}
+
+.testimonial {
+    background-color: var(--bg-color);
+    padding: 20px;
+    font-style: italic;
+    border-left: 4px solid var(--main-color);
+    margin-top: 20px;
+}
+
+.testimonial p {
+    margin-bottom: 10px;
+}
+
+.testimonial cite {
+    display: block;
+    font-style: normal;
+    font-weight: bold;
+    text-align: right;
+}
+
+/* CTA section */
+#cta-client {
+    position: relative;
+    background-image: url('/static/images/test_23.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 80px 0;
+    color: var(--text-color);
+}
+
+#cta-client h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--main-color);
+    color: var(--text-color);
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.cta-button:hover {
+    background-color: var(--accent-color);
+}
+
+/* Media Queries for larger screens */
+@media screen and (min-width: 768px) {
+    #showcase-client h1 {
+        font-size: 3.5rem;
+    }
+
+    #showcase-client p {
+        font-size: 1.5rem;
+    }
+
+    #intro-client h2 {
+        font-size: 2.5rem;
+    }
+
+    .challenge, .solution {
+        flex: 1 1 50%;
+    }
+
+    .results {
+        flex: 1 1 40%;
+    }
+
+    .testimonial {
+        flex: 1 1 60%;
+    }
+
+    #cta-client h2 {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .story-content {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .challenge-solution {
+        flex: 2;
+        margin-right: 30px;
+    }
+
+    .results-testimonial {
+        flex: 1;
+    }
+
+    .challenge, .solution, .results, .testimonial {
+        flex: 1 1 100%;
+    }
+}

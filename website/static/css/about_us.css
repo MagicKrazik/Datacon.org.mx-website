@@ -1,0 +1,389 @@
+/* About Us page styles */
+:root {
+    --main-color: #006B31;
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --secondary-color: #1e1e1e;
+    --accent-color: #00a348;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: var(--main-color);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.section-intro {
+    font-size: 1.1rem;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+/* Showcase section */
+#showcase-about {
+    position: relative;
+    background-image: url('/static/images/test_4.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 150px 0;
+    color: var(--text-color);
+}
+
+.showcase-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#showcase-about h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+#showcase-about p {
+    font-size: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* Our Story section */
+#our-story .content-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Team member */
+.team-member {
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    padding: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.team-member-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 40px;
+}
+
+.team-member-info {
+    flex: 1;
+}
+
+.team-member h3 {
+    color: var(--main-color);
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.member-title {
+    font-style: italic;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.read-more-btn {
+    background-color: var(--main-color);
+    color: var(--text-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+}
+
+.read-more-btn:hover {
+    background-color: var(--accent-color);
+}
+
+.member-details {
+    display: none;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.member-details.show {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.details-column {
+    flex: 1;
+    min-width: 250px;
+    padding: 0 20px;
+}
+
+.member-details h4 {
+    color: var(--main-color);
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.member-details ul {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.member-details blockquote {
+    font-style: italic;
+    border-left: 3px solid var(--main-color);
+    padding-left: 20px;
+    margin: 20px 0;
+}
+
+/* ... previous styles remain unchanged ... */
+
+/* Experience section */
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.experience-item {
+    background-color: var(--secondary-color);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.experience-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.experience-item i {
+    font-size: 3rem;
+    color: var(--main-color);
+    margin-bottom: 20px;
+}
+
+.experience-item h3 {
+    font-size: 1.2rem;
+    color: #00a348;
+}
+
+/* Approach section */
+.approach-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.approach-item {
+    background-color: var(--secondary-color);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.approach-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.approach-item i {
+    font-size: 2.5rem;
+    color: var(--main-color);
+    margin-bottom: 20px;
+}
+
+.approach-item h3 {
+    font-size: 1.2rem;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+}
+
+.approach-item p {
+    font-size: 0.9rem;
+}
+
+/* Why Choose Us section */
+.choose-us-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.choose-us-item {
+    background-color: var(--secondary-color);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.choose-us-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.choose-us-item i {
+    font-size: 2.5rem;
+    color: var(--main-color);
+    margin-bottom: 20px;
+}
+
+.choose-us-item h3 {
+    font-size: 1.2rem;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+}
+
+.choose-us-item p {
+    font-size: 0.9rem;
+}
+
+.closing-statement {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 50px;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .experience-grid,
+    .approach-grid,
+    .choose-us-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-item,
+    .approach-item,
+    .choose-us-item {
+        padding: 20px;
+    }
+
+    .experience-item i,
+    .approach-item i,
+    .choose-us-item i {
+        font-size: 2rem;
+    }
+
+    .experience-item h3,
+    .approach-item h3,
+    .choose-us-item h3 {
+        font-size: 1.1rem;
+    }
+
+    .approach-item p,
+    .choose-us-item p {
+        font-size: 0.85rem;
+    }
+
+    .closing-statement {
+        font-size: 1.1rem;
+        margin-top: 30px;
+    }
+}
+
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .section {
+        padding: 60px 0;
+    }
+
+    #showcase-about {
+        padding: 100px 0;
+    }
+
+    #showcase-about h1 {
+        font-size: 2.5rem;
+    }
+
+    #showcase-about p {
+        font-size: 1.2rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .team-member {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .team-member-image {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .details-column {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+.team-member-quote {
+    font-style: italic;
+    border-left: 4px solid var(--main-color);
+    padding: 20px;
+    margin: 30px -40px -40px -36px; /* Negative margins to extend to the edges of the container */
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 10px 10px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    position: relative;
+}
+
+
+
+.team-member-quote cite {
+    display: block;
+    text-align: right;
+    margin-top: 10px;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+@media screen and (max-width: 768px) {
+    .team-member-quote {
+        margin: 20px -20px -20px -16px; /* Adjust margins for smaller screens */
+        padding: 15px;
+        font-size: 1rem;
+    }
+}

@@ -1,24 +1,30 @@
 {% extends "base.html" %}
 {% load static %}
-
 {% block title %}Datacon.org.mx - Our Process{% endblock %}
-
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/our_process.css' %}">
+{% endblock %}
 {% block content %}
-    <section id="showcase-process">
-        <div class="container-process-1">
-            <h1>Our Process</h1>
-            <p>Collaborative, Transparent, and Results-Driven Approach</p>
-        </div>
-    </section>
 
-    <div class="container-process-2">
-        <section id="intro-process">
-            <h2>Our Approach</h2>
-            <p>At Datacon.org.mx, we believe in a collaborative, transparent, and results-driven approach. Our process is designed to ensure that we fully understand your business needs, deliver tailored solutions, and provide ongoing support for your success.</p>
-        </section>
+<section id="showcase-process" class="section">
+    <div class="showcase-overlay"></div>
+    <div class="container">
+        <h1>Our Process</h1>
+        <p>Collaborative, Transparent, and Results-Driven Approach</p>
+    </div>
+</section>
 
-        <section id="process-steps">
-            <!-- Process steps remain the same -->
+<section id="intro-process" class="section">
+    <div class="container">
+        <h2>Our Approach</h2>
+        <p>At Datacon.org.mx, we believe in a collaborative, transparent, and results-driven approach. Our process is designed to ensure that we fully understand your business needs, deliver tailored solutions, and provide ongoing support for your success.</p>
+    </div>
+</section>
+
+<section id="process-steps" class="section">
+    <div class="container">
+        <h2>Our Step-by-Step Process</h2>
+        <div class="process-timeline">
             <div class="step">
                 <div class="step-number">1</div>
                 <div class="step-content">
@@ -96,14 +102,17 @@
                     </ul>
                 </div>
             </div>
-        </section> 
-
-        <section id="cta-process">
-            <div class="container-process-3">
-            <h2>Flexible Approach</h2>
-            <h3>Our process is flexible and can be tailored to meet the specific needs of your business. We're committed to delivering not just a product, but a transformative solution that drives your business forward.</h3>
-            <a href="{% url 'request_quote' %}" class="cta-button">Begin Your Transformation</a>
-            </div>
-        </section>
+        </div>
     </div>
+</section>
+
+<section id="cta-process" class="section">
+    <div class="showcase-overlay"></div>
+    <div class="container">
+        <h2>Flexible Approach</h2>
+        <p>Our process is flexible and can be tailored to meet the specific needs of your business. We're committed to delivering not just a product, but a transformative solution that drives your business forward.</p>
+        <a href="{% url 'request_quote' %}" class="cta-button">Begin Your Transformation</a>
+    </div>
+</section>
+
 {% endblock %}

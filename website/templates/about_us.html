@@ -3,48 +3,51 @@
 
 {% block title %}Datacon.org.mx - About Us{% endblock %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about_us.css' %}">
+{% endblock %}
+
 {% block content %}
-    <section id="showcase-about">
-        <div class="container-about-1">
-            <h1>About Datacon.org.mx</h1>
-            <p>Revolutionizing Business Through Data and Technology</p>
-        </div>
-    </section>
+<section id="showcase-about" class="section">
+    <div class="showcase-overlay"></div>
+    <div class="container">
+        <h1>About Datacon.org.mx</h1>
+        <p>Revolutionizing Business Through Data and Technology</p>
+    </div>
+</section>
 
-    <div class="container-about-2">
-        <section id="our-story" class="about-section">
-            <h2>Our Story</h2>
-            <!-- Story content here -->
+<section id="our-story" class="section">
+    <div class="container">
+        <h2>Our Story</h2>
+        <div class="content-wrapper">
             <p>Datacon.org.mx was born from a vision to revolutionize how small and medium-sized businesses leverage technology and data. Our founder's diverse background in economics, finance, accounting, and Python development laid the foundation for a unique approach to business consulting.</p>
-            <p>After years of working across various industries - from banking and corporate finance to fintech and logistics - our founder noticed a common thread: businesses were struggling with outdated processes, lack of data visibility, and ill-fitting technology solutions. This realization sparked the idea for Datacon.org.mx.</p> 
-        </section>
+            <p>After years of working across various industries - from banking and corporate finance to fintech and logistics - our founder noticed a common thread: businesses were struggling with outdated processes, lack of data visibility, and ill-fitting technology solutions. This realization sparked the idea for Datacon.org.mx.</p>
+        </div>
+    </div>
+</section>
 
-        <section id="our-team" class="about-section">
-            <h2>Our Team</h2>
-            <!-- Team member information here -->
-            <p>At Datacon.org.mx, we've assembled a team of experts with deep knowledge in both finance and technology. This unique combination allows us to bridge the gap between business needs and technological solutions, providing our clients with unparalleled insights and innovative strategies.</p>
-            
-            <div class="team-member">
-                <img src="{% static 'images/carlos_olivares.jpg' %}" alt="Carlos Horacio Olivares" class="team-member-image">
+<section id="our-team" class="section">
+    <div class="container">
+        <h2>Our Team</h2>
+        <p class="section-intro">At Datacon.org.mx, we've assembled a team of experts with deep knowledge in both finance and technology. This unique combination allows us to bridge the gap between business needs and technological solutions, providing our clients with unparalleled insights and innovative strategies.</p>
+        
+        <div class="team-member">
+            <img src="{% static 'images/carlos_olivares.jpg' %}" alt="Carlos Horacio Olivares" class="team-member-image">
+            <div class="team-member-info">
                 <h3>Carlos Horacio Olivares</h3>
-                <p class="title">Founder and CEO</p>
-                <p class="bio">Carlos is the visionary founder and CEO of Datacon.org.mx. With a unique blend of financial expertise and advanced technical skills, he brings over 6 years of experience as a Python developer specializing in creating in-house software, automating processes, and delivering data-driven insights across various industries.</p>
+                <p class="member-title">Founder and CEO</p>
+                <p>Carlos is the visionary founder and CEO of Datacon.org.mx. With a unique blend of financial expertise and advanced technical skills, he brings over 6 years of experience as a Python developer specializing in creating in-house software, automating processes, and delivering data-driven insights across various industries.</p>
                 <button class="read-more-btn">Read More</button>
-                <div class="member-details">
-                    <h4>Education:</h4>
+            </div>
+            <div class="member-details">
+                <div class="details-column">
+                    <h4>Education</h4>
                     <ul>
-                        <li>Master in Accounting, Instituto Tecnológico Autónomo de México (ITAM)</li>
-                        <li>Master in Finance, Instituto Tecnológico Autónomo de México (ITAM)</li>
-                        <li>Bachelor's degree in Economics, Instituto Tecnológico Autónomo de México (ITAM)</li>
+                        <li>Master in Accounting, ITAM</li>
+                        <li>Master in Finance, ITAM</li>
+                        <li>Bachelor's degree in Economics, ITAM</li>
                     </ul>
-                    <h4>Professional Background:</h4>
-                    <ul>
-                        <li>Sr. Data Analyst & Process Automation Specialist at KT&I Konstruktion Technologie & Innovation</li>
-                        <li>Sr. Strategy & Operations Manager at Nuvocargo</li>
-                        <li>Senior Consultant Corporate Finance at FTI Consulting</li>
-                        <li>Finance Python Developer at Producepay</li>
-                    </ul>
-                    <h4>Areas of Expertise:</h4>
+                    <h4>Areas of Expertise</h4>
                     <ul>
                         <li>Financial Process Automation</li>
                         <li>Data Analysis and Business Intelligence</li>
@@ -52,83 +55,154 @@
                         <li>Process Optimization and Automation</li>
                         <li>Corporate Finance and Turnaround Strategies</li>
                     </ul>
-                    <h4>Notable Achievements:</h4>
-                    <ul>
-                        <li>Reduced complex commodity price calculation time from 4-6 hours to 15 minutes, a 95% reduction in processing time</li>
-                        <li>Implemented BI dashboards that improved decision-making processes and enabled data-driven strategies across multiple industries</li>
-                        <li>Developed custom software solutions that significantly enhanced operational efficiency in logistics and construction industries</li>
-                        <li>Led the implementation of cutting-edge communication technologies, resulting in a 25% reduction in response times to site issues in the construction industry</li>
-                    </ul>
-                    <h4>Languages:</h4>
-                    <ul>
-                        <li>Spanish (Native)</li>
-                        <li>English (Advanced)</li>
-                        <li>German (Advanced)</li>
-                    </ul>
-                    <blockquote>"In today's fast-paced business environment, the intersection of finance and technology is where true innovation happens. At Datacon.org.mx, we're committed to leveraging this powerful combination to help businesses achieve unprecedented growth, efficiency, and competitive advantage." - Carlos Horacio Olivares</blockquote>
                 </div>
-            </div> 
-        </section>
-
-        <section id="our-experience" class="about-section">
-            <h2>Our Experience</h2>
-            <!-- Experience content here -->
-            <p>Our team's experience spans a wide range of industries, giving us unique insights into the challenges faced by businesses across sectors.</p>
-            <div class="experience-grid">
-                <div class="experience-item">Banking and Financial Services</div>
-                <div class="experience-item">Corporate Finance Consulting</div>
-                <div class="experience-item">Construction and Real Estate</div>
-                <div class="experience-item">Retail and E-commerce</div>
-                <div class="experience-item">Pharmaceutical and Healthcare</div>
-                <div class="experience-item">Hospitality and Tourism</div>
-                <div class="experience-item">Aviation</div>
-                <div class="experience-item">Fintech</div>
-                <div class="experience-item">Logistics and Supply Chain</div>
-            </div> 
-        </section>
-
-        <section id="our-approach" class="about-section">
-            <h2>Our Approach</h2>
-            <!-- Approach content here -->
-            <p>At Datacon.org.mx, we believe in the power of customized solutions. We don't just sell software; we create tailored systems that seamlessly integrate with your existing workflows. Our approach is rooted in:</p>
-            <ol>
-                <li>Deep understanding of industry-specific challenges</li>
-                <li>Customization of solutions to fit unique business needs</li>
-                <li>Seamless integration of technology into existing processes</li>
-                <li>Data-driven decision making and analytics</li>
-                <li>Continuous innovation to keep our clients ahead of the curve</li>
-            </ol> 
-        </section>
-
-        <section id="why-choose-us" class="about-section">
-            <h2>Why Choose Datacon.org.mx?</h2>
-            <!-- Reasons to choose Datacon.org.mx here -->
-            <p>When you work with us, you're not just getting a service provider - you're gaining a partner committed to your success. We bring:</p>
-            <ol>
-                <li>A unique blend of financial acumen and technological expertise</li>
-                <li>Practical experience across multiple industries</li>
-                <li>A commitment to creating solutions that truly fit your business</li>
-                <li>A passion for driving innovation and efficiency</li>
-                <li>A focus on long-term partnerships and continuous improvement</li>
-            </ol>
-            <p>At Datacon.org.mx, we're not just building software - we're transforming businesses. Our team of financial and technology experts is ready to guide you on this journey of innovation, efficiency, and growth.</p> 
-        </section>
+                <div class="details-column">
+                    <h4>Professional Background</h4>
+                    <ul>
+                        <li>Sr. Data Analyst & Process Automation Specialist at KT&I</li>
+                        <li>Sr. Strategy & Operations Manager at Nuvocargo</li>
+                        <li>Senior Consultant Corporate Finance at FTI Consulting</li>
+                        <li>Finance Python Developer at Producepay</li>
+                    </ul>
+                    <blockquote  class="team-member-quote">
+                        "In today's fast-paced business environment, the intersection of finance and technology is where true innovation happens. At Datacon.org.mx, we're committed to leveraging this powerful combination to help businesses achieve unprecedented growth, efficiency, and competitive advantage."
+                        <cite>- Carlos Horacio Olivares</cite>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
     </div>
+</section>
+
+
+<section id="our-experience" class="section">
+    <div class="container">
+        <h2>Our Experience</h2>
+        <p class="section-intro">Our team's experience spans a wide range of industries, giving us unique insights into the challenges faced by businesses across sectors.</p>
+        <div class="experience-grid">
+            <div class="experience-item">
+                <i class="fas fa-landmark"></i>
+                <h3>Banking and Financial Services</h3>
+            </div>
+            <div class="experience-item">
+                <i class="fas fa-chart-line"></i>
+                <h3>Corporate Finance Consulting</h3>
+            </div>
+            <div class="experience-item">
+                <i class="fas fa-building"></i>
+                <h3>Construction and Real Estate</h3>
+            </div>
+            <div class="experience-item">
+                <i class="fas fa-shopping-cart"></i>
+                <h3>Retail and E-commerce</h3>
+            </div>
+            <div class="experience-item">
+                <i class="fas fa-pills"></i>
+                <h3>Pharmaceutical and Healthcare</h3>
+            </div>
+            <div class="experience-item">
+                <i class="fas fa-hotel"></i>
+                <h3>Hospitality and Tourism</h3>
+            </div>
+            <div class="experience-item">
+                <i class="fas fa-plane"></i>
+                <h3>Aviation</h3>
+            </div>
+            <div class="experience-item">
+                <i class="fas fa-money-bill-wave"></i>
+                <h3>Fintech</h3>
+            </div>
+            <div class="experience-item">
+                <i class="fas fa-truck"></i>
+                <h3>Logistics and Supply Chain</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="our-approach" class="section">
+    <div class="container">
+        <h2>Our Approach</h2>
+        <p class="section-intro">At Datacon.org.mx, we believe in the power of customized solutions. We don't just sell software; we create tailored systems that seamlessly integrate with your existing workflows.</p>
+        <div class="approach-grid">
+            <div class="approach-item">
+                <i class="fas fa-search"></i>
+                <h3>Deep Understanding</h3>
+                <p>We analyze industry-specific challenges to provide targeted solutions.</p>
+            </div>
+            <div class="approach-item">
+                <i class="fas fa-cogs"></i>
+                <h3>Customization</h3>
+                <p>Our solutions are tailored to fit your unique business needs.</p>
+            </div>
+            <div class="approach-item">
+                <i class="fas fa-puzzle-piece"></i>
+                <h3>Seamless Integration</h3>
+                <p>We ensure smooth integration of technology into existing processes.</p>
+            </div>
+            <div class="approach-item">
+                <i class="fas fa-chart-bar"></i>
+                <h3>Data-Driven Decisions</h3>
+                <p>We leverage analytics to drive informed decision-making.</p>
+            </div>
+            <div class="approach-item">
+                <i class="fas fa-lightbulb"></i>
+                <h3>Continuous Innovation</h3>
+                <p>We keep our clients ahead of the curve with cutting-edge solutions.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="why-choose-us" class="section">
+    <div class="container">
+        <h2>Why Choose Datacon.org.mx?</h2>
+        <p class="section-intro">When you work with us, you're not just getting a service provider - you're gaining a partner committed to your success.</p>
+        <div class="choose-us-grid">
+            <div class="choose-us-item">
+                <i class="fas fa-balance-scale"></i>
+                <h3>Unique Expertise Blend</h3>
+                <p>We combine financial acumen with technological expertise.</p>
+            </div>
+            <div class="choose-us-item">
+                <i class="fas fa-industry"></i>
+                <h3>Cross-Industry Experience</h3>
+                <p>Our practical experience spans multiple industries.</p>
+            </div>
+            <div class="choose-us-item">
+                <i class="fas fa-handshake"></i>
+                <h3>Tailored Solutions</h3>
+                <p>We are committed to creating solutions that truly fit your business.</p>
+            </div>
+            <div class="choose-us-item">
+                <i class="fas fa-rocket"></i>
+                <h3>Innovation Driven</h3>
+                <p>We are passionate about driving innovation and efficiency.</p>
+            </div>
+            <div class="choose-us-item">
+                <i class="fas fa-users"></i>
+                <h3>Long-Term Partnership</h3>
+                <p>We focus on long-term partnerships and continuous improvement.</p>
+            </div>
+        </div>
+        <p class="closing-statement">At Datacon.org.mx, we're not just building software - we're transforming businesses. Our team of financial and technology experts is ready to guide you on this journey of innovation, efficiency, and growth.</p>
+    </div>
+</section>
+
+
+
 {% endblock %}
 
 {% block extra_js %}
-    <script>
-        document.querySelectorAll('.read-more-btn').forEach(button => {
-            button.addEventListener('click', function() {
-                const details = this.nextElementSibling;
-                if (details.style.display === 'none' || details.style.display === '') {
-                    details.style.display = 'block';
-                    this.textContent = 'Read Less';
-                } else {
-                    details.style.display = 'none';
-                    this.textContent = 'Read More';
-                }
-            });
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const readMoreBtn = document.querySelector('.read-more-btn');
+        const memberDetails = document.querySelector('.member-details');
+        
+        readMoreBtn.addEventListener('click', function() {
+            memberDetails.classList.toggle('show');
+            readMoreBtn.textContent = memberDetails.classList.contains('show') ? 'Read Less' : 'Read More';
         });
-    </script>
+    });
+</script>
 {% endblock %}
