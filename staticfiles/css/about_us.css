@@ -12,30 +12,31 @@ body {
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--bg-color);
+    font-size: 16px; /* Base font size */
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 90vw;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 5vw;
 }
 
 .section {
-    padding: 80px 0;
+    padding: 10vh 0;
 }
 
 h2 {
-    font-size: 2.5rem;
+    font-size: 6vw;
     color: var(--main-color);
-    margin-bottom: 30px;
+    margin-bottom: 4vh;
     text-align: center;
 }
 
 .section-intro {
-    font-size: 1.1rem;
+    font-size: 3vw;
     text-align: center;
-    max-width: 800px;
-    margin: 0 auto 40px;
+    max-width: 90vw;
+    margin: 0 auto 5vh;
 }
 
 /* Showcase section */
@@ -45,7 +46,7 @@ h2 {
     background-size: cover;
     background-position: center;
     text-align: center;
-    padding: 150px 0;
+    padding: 20vh 0;
     color: var(--text-color);
 }
 
@@ -59,42 +60,42 @@ h2 {
 }
 
 #showcase-about h1 {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
+    font-size: 8vw;
+    margin-bottom: 2vh;
     position: relative;
     z-index: 1;
 }
 
 #showcase-about p {
-    font-size: 1.5rem;
+    font-size: 4vw;
     position: relative;
     z-index: 1;
 }
 
 /* Our Story section */
 #our-story .content-wrapper {
-    max-width: 800px;
+    max-width: 90vw;
     margin: 0 auto;
 }
 
 /* Team member */
 .team-member {
     background-color: var(--secondary-color);
-    border-radius: 10px;
-    padding: 40px;
-    margin-bottom: 40px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 2vw;
+    padding: 5vw;
+    margin-bottom: 5vh;
+    box-shadow: 0 1vw 2vw rgba(0, 0, 0, 0.1);
     display: flex;
     flex-wrap: wrap;
     align-items: center;
 }
 
 .team-member-image {
-    width: 200px;
-    height: 200px;
+    width: 40vw;
+    height: 40vw;
     border-radius: 50%;
     object-fit: cover;
-    margin-right: 40px;
+    margin-right: 5vw;
 }
 
 .team-member-info {
@@ -103,25 +104,25 @@ h2 {
 
 .team-member h3 {
     color: var(--main-color);
-    font-size: 2rem;
-    margin-bottom: 10px;
+    font-size: 5vw;
+    margin-bottom: 2vh;
 }
 
 .member-title {
     font-style: italic;
-    margin-bottom: 20px;
-    font-size: 1.1rem;
+    margin-bottom: 3vh;
+    font-size: 3vw;
 }
 
 .read-more-btn {
     background-color: var(--main-color);
     color: var(--text-color);
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 2vw 4vw;
+    border-radius: 1vw;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    font-size: 1rem;
+    font-size: 3vw;
 }
 
 .read-more-btn:hover {
@@ -130,7 +131,7 @@ h2 {
 
 .member-details {
     display: none;
-    margin-top: 30px;
+    margin-top: 4vh;
     width: 100%;
 }
 
@@ -141,42 +142,40 @@ h2 {
 
 .details-column {
     flex: 1;
-    min-width: 250px;
-    padding: 0 20px;
+    min-width: 100%;
+    padding: 0 2vw;
 }
 
 .member-details h4 {
     color: var(--main-color);
-    margin-top: 20px;
-    margin-bottom: 10px;
-    font-size: 1.2rem;
+    margin-top: 3vh;
+    margin-bottom: 2vh;
+    font-size: 4vw;
 }
 
 .member-details ul {
-    padding-left: 20px;
-    margin-bottom: 20px;
+    padding-left: 5vw;
+    margin-bottom: 3vh;
 }
 
 .member-details blockquote {
     font-style: italic;
-    border-left: 3px solid var(--main-color);
-    padding-left: 20px;
-    margin: 20px 0;
+    border-left: 0.5vw solid var(--main-color);
+    padding-left: 3vw;
+    margin: 3vh 0;
 }
-
-/* ... previous styles remain unchanged ... */
 
 /* Experience section */
 .experience-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(40vw, 1fr));
+    gap: 4vw;
 }
 
 .experience-item {
     background-color: var(--secondary-color);
-    padding: 30px;
-    border-radius: 10px;
+    padding: 4vw;
+    border-radius: 2vw;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
@@ -186,204 +185,245 @@ h2 {
 }
 
 .experience-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-1vh);
+    box-shadow: 0 2vw 4vw rgba(0, 0, 0, 0.2);
 }
 
 .experience-item i {
-    font-size: 3rem;
+    font-size: 8vw;
     color: var(--main-color);
-    margin-bottom: 20px;
+    margin-bottom: 2vh;
 }
 
 .experience-item h3 {
-    font-size: 1.2rem;
+    font-size: 3.5vw;
     color: #00a348;
 }
 
 /* Approach section */
 .approach-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(40vw, 1fr));
+    gap: 4vw;
 }
 
 .approach-item {
     background-color: var(--secondary-color);
-    padding: 30px;
-    border-radius: 10px;
+    padding: 4vw;
+    border-radius: 2vw;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .approach-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-1vh);
+    box-shadow: 0 2vw 4vw rgba(0, 0, 0, 0.2);
 }
 
 .approach-item i {
-    font-size: 2.5rem;
+    font-size: 8vw;
     color: var(--main-color);
-    margin-bottom: 20px;
+    margin-bottom: 2vh;
 }
 
 .approach-item h3 {
-    font-size: 1.2rem;
+    font-size: 3.5vw;
     color: var(--accent-color);
-    margin-bottom: 15px;
+    margin-bottom: 2vh;
 }
 
 .approach-item p {
-    font-size: 0.9rem;
+    font-size: 2.5vw;
 }
 
 /* Why Choose Us section */
 .choose-us-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(40vw, 1fr));
+    gap: 4vw;
 }
 
 .choose-us-item {
     background-color: var(--secondary-color);
-    padding: 30px;
-    border-radius: 10px;
+    padding: 4vw;
+    border-radius: 2vw;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .choose-us-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-1vh);
+    box-shadow: 0 2vw 4vw rgba(0, 0, 0, 0.2);
 }
 
 .choose-us-item i {
-    font-size: 2.5rem;
+    font-size: 8vw;
     color: var(--main-color);
-    margin-bottom: 20px;
+    margin-bottom: 2vh;
 }
 
 .choose-us-item h3 {
-    font-size: 1.2rem;
+    font-size: 3.5vw;
     color: var(--accent-color);
-    margin-bottom: 15px;
+    margin-bottom: 2vh;
 }
 
 .choose-us-item p {
-    font-size: 0.9rem;
+    font-size: 2.5vw;
 }
 
 .closing-statement {
     text-align: center;
-    font-size: 1.5rem;
-    margin-top: 50px;
+    font-size: 4vw;
+    margin-top: 6vh;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+.team-member-quote {
+    font-style: italic;
+    border-left: 1vw solid var(--main-color);
+    padding: 3vw;
+    margin: 4vh -5vw -5vw -4vw;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 2vw 2vw;
+    font-size: 3vw;
+    line-height: 1.6;
+    position: relative;
+}
+
+.team-member-quote cite {
+    display: block;
+    text-align: right;
+    margin-top: 2vh;
     font-weight: bold;
     color: var(--accent-color);
 }
 
 /* Media Queries */
-@media screen and (max-width: 768px) {
-    .experience-grid,
-    .approach-grid,
-    .choose-us-grid {
-        grid-template-columns: 1fr;
+@media screen and (min-width: 768px) {
+    body {
+        font-size: 18px;
     }
 
-    .experience-item,
-    .approach-item,
-    .choose-us-item {
-        padding: 20px;
+    h2 {
+        font-size: 3vw;
     }
 
-    .experience-item i,
-    .approach-item i,
-    .choose-us-item i {
-        font-size: 2rem;
+    .section-intro {
+        font-size: 1.5vw;
+    }
+
+    #showcase-about h1 {
+        font-size: 4vw;
+    }
+
+    #showcase-about p {
+        font-size: 2vw;
+    }
+
+    .team-member-image {
+        width: 20vw;
+        height: 20vw;
+    }
+
+    .team-member h3 {
+        font-size: 2.5vw;
+    }
+
+    .member-title {
+        font-size: 1.5vw;
+    }
+
+    .read-more-btn {
+        font-size: 1.5vw;
+        padding: 1vw 2vw;
+    }
+
+    .member-details h4 {
+        font-size: 2vw;
     }
 
     .experience-item h3,
     .approach-item h3,
     .choose-us-item h3 {
-        font-size: 1.1rem;
+        font-size: 1.8vw;
     }
 
     .approach-item p,
     .choose-us-item p {
-        font-size: 0.85rem;
+        font-size: 1.2vw;
     }
 
     .closing-statement {
-        font-size: 1.1rem;
-        margin-top: 30px;
+        font-size: 2vw;
+    }
+
+    .team-member-quote {
+        font-size: 1.5vw;
     }
 }
 
-
-/* Media Queries */
-@media screen and (max-width: 768px) {
-    .section {
-        padding: 60px 0;
-    }
-
-    #showcase-about {
-        padding: 100px 0;
-    }
-
-    #showcase-about h1 {
-        font-size: 2.5rem;
-    }
-
-    #showcase-about p {
-        font-size: 1.2rem;
+@media screen and (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+        padding: 0 20px;
     }
 
     h2 {
-        font-size: 2rem;
+        font-size: 36px;
     }
 
-    .team-member {
-        flex-direction: column;
-        text-align: center;
-        padding: 30px;
+    .section-intro {
+        font-size: 18px;
+    }
+
+    #showcase-about h1 {
+        font-size: 48px;
+    }
+
+    #showcase-about p {
+        font-size: 24px;
     }
 
     .team-member-image {
-        margin-right: 0;
-        margin-bottom: 20px;
+        width: 240px;
+        height: 240px;
     }
 
-    .details-column {
-        width: 100%;
-        padding: 0;
+    .team-member h3 {
+        font-size: 30px;
     }
-}
 
-.team-member-quote {
-    font-style: italic;
-    border-left: 4px solid var(--main-color);
-    padding: 20px;
-    margin: 30px -40px -40px -36px; /* Negative margins to extend to the edges of the container */
-    background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 0 0 10px 10px;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    position: relative;
-}
+    .member-title {
+        font-size: 18px;
+    }
 
+    .read-more-btn {
+        font-size: 18px;
+        padding: 12px 24px;
+    }
 
+    .member-details h4 {
+        font-size: 24px;
+    }
 
-.team-member-quote cite {
-    display: block;
-    text-align: right;
-    margin-top: 10px;
-    font-weight: bold;
-    color: var(--accent-color);
-}
+    .experience-item h3,
+    .approach-item h3,
+    .choose-us-item h3 {
+        font-size: 22px;
+    }
 
-@media screen and (max-width: 768px) {
+    .approach-item p,
+    .choose-us-item p {
+        font-size: 16px;
+    }
+
+    .closing-statement {
+        font-size: 24px;
+    }
+
     .team-member-quote {
-        margin: 20px -20px -20px -16px; /* Adjust margins for smaller screens */
-        padding: 15px;
-        font-size: 1rem;
+        font-size: 18px;
     }
 }
