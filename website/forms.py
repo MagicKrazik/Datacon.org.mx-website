@@ -23,6 +23,7 @@ class QuoteRequestForm(forms.ModelForm):
         choices=[
             ('', 'Select a project type'),
             ('custom-web-app', 'Custom Web Application'),
+            ('ai-agents', 'Custom AI Agent'),
             ('data-analytics', 'Data Analytics Solution'),
             ('process-automation', 'Process Automation'),
             ('financial-system', 'Financial Management System'),

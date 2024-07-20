@@ -1,10 +1,10 @@
 /* About Us page styles */
 :root {
-    --main-color: #006B31;
+    --main-color: #008080;
     --bg-color: #121212;
     --text-color: #ffffff;
     --secondary-color: #1e1e1e;
-    --accent-color: #00a348;
+    --accent-color: #00b3b3;
 }
 
 body {
@@ -198,7 +198,7 @@ h2 {
 
 .experience-item h3 {
     font-size: 1.2rem;
-    color: #00a348;
+    color: var(--accent-color);
 }
 
 /* Approach section */
