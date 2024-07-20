@@ -27,6 +27,8 @@ body {
 h2 {
     color: var(--main-color);
     margin-bottom: 20px;
+    font-size: 2.5rem;
+    text-align: center;
 }
 
 /* Showcase section */
@@ -54,104 +56,32 @@ h2 {
     margin-bottom: 20px;
     position: relative;
     z-index: 1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 #showcase-sol p {
     font-size: 1.5rem;
     position: relative;
     z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-
-/* Key Advantages */
-.advantages-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-}
-
-.advantage-item {
+/* Intro section */
+#intro {
     background-color: var(--secondary-color);
-    padding: 30px;
-    border-radius: 10px;
+}
+
+#intro p {
+    max-width: 800px;
+    margin: 0 auto;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 1.1rem;
 }
-
-.advantage-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.advantage-item i {
-    font-size: 3rem;
-    color: var(--main-color);
-    margin-bottom: 20px;
-}
-
-.advantage-item h3 {
-    color: var(--accent-color);
-    margin-bottom: 15px;
-}
-
-/* CTA section */
-#cta-sol {
-    background-color: var(--secondary-color);
-    text-align: center;
-}
-
-.cta-button {
-    display: inline-block;
-    background-color: var(--main-color);
-    color: var(--text-color);
-    padding: 12px 24px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-    margin-top: 20px;
-}
-
-.cta-button:hover {
-    background-color: var(--accent-color);
-}
-
-/* Responsive design */
-@media screen and (max-width: 768px) {
-    .section {
-        padding: 60px 0;
-    }
-
-    #showcase-sol {
-        padding: 100px 0;
-    }
-
-    #showcase-sol h1 {
-        font-size: 2.5rem;
-    }
-
-    #showcase-sol p {
-        font-size: 1.2rem;
-    }
-
-    .advantages-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
 
 /* Comparison Section Styles */
 #comparison-section {
     background-color: var(--bg-color);
-    padding: 80px 0;
-}
-
-#comparison-section h2 {
-    text-align: center;
-    margin-bottom: 40px;
-    color: var(--main-color);
-    font-size: 2.5rem;
 }
 
 .comparison-grid {
@@ -216,7 +146,76 @@ h2 {
     color: #ff4444;
 }
 
-@media screen and (max-width: 768px) {
+/* Key Advantages */
+#key-advantages {
+    background-color: var(--secondary-color);
+}
+
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.advantage-item {
+    background-color: var(--bg-color);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.advantage-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.advantage-item i {
+    font-size: 3rem;
+    color: var(--main-color);
+    margin-bottom: 20px;
+}
+
+.advantage-item h3 {
+    color: var(--accent-color);
+    margin-bottom: 15px;
+}
+
+/* CTA section */
+#cta-sol {
+    background-color: var(--bg-color);
+    text-align: center;
+}
+
+#cta-sol h2 {
+    margin-bottom: 20px;
+}
+
+#cta-sol p {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    font-size: 1.1rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--main-color);
+    color: var(--text-color);
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-3px);
+}
+
+/* Responsive design */
+@media screen and (max-width: 968px) {
     .comparison-header,
     .comparison-row {
         flex-direction: column;
@@ -230,8 +229,49 @@ h2 {
         background-color: var(--main-color);
         color: var(--text-color);
     }
+}
 
-    #comparison-section h2 {
+@media screen and (max-width: 768px) {
+    .section {
+        padding: 60px 0;
+    }
+
+    #showcase-sol {
+        padding: 100px 0;
+    }
+
+    #showcase-sol h1 {
+        font-size: 2.5rem;
+    }
+
+    #showcase-sol p {
+        font-size: 1.2rem;
+    }
+
+    h2 {
         font-size: 2rem;
+    }
+
+    .advantages-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #showcase-sol h1 {
+        font-size: 2rem;
+    }
+
+    #showcase-sol p {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .comparison-cell,
+    .advantage-item {
+        padding: 15px;
     }
 }

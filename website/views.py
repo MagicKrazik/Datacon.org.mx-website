@@ -55,12 +55,9 @@ def contact(request):
             form.save()
             messages.success(request, 'Thank you for your message! We will get back to you shortly.')
             return redirect('contact')
-        else:
-            messages.error(request, 'There was an error with your submission. Please check the form and try again.')
     else:
         form = ContactForm()
     return render(request, 'contact.html', {'form': form})
-
 
 class QuoteRequestView(CreateView):
     model = QuoteRequest
@@ -76,7 +73,6 @@ class QuoteRequestView(CreateView):
     def form_invalid(self, form):
         messages.error(self.request, "There was an error processing your quote request. Please review your information and try again.")
         return super().form_invalid(form)    
-    
 
 def login_view(request):
     if request.method == 'POST':
@@ -84,7 +80,7 @@ def login_view(request):
         if form.is_valid():
             user = form.get_user()
             login(request, user)
-            return redirect('home')  # Redirect to contact submissions after login
+            return redirect('home')
     else:
         form = AuthenticationForm()
     return render(request, 'login.html', {'form': form})
@@ -98,7 +94,7 @@ def logout_view(request):
 @login_required
 def contact_submissions(request):
     contacts_list = ContactMessage.objects.all().order_by('-created_at')
-    paginator = Paginator(contacts_list, 10)  # Show 10 contacts per page
+    paginator = Paginator(contacts_list, 10)
     page_number = request.GET.get('page')
     contacts = paginator.get_page(page_number)
     return render(request, 'contact_submissions.html', {'contacts': contacts})
@@ -106,7 +102,7 @@ def contact_submissions(request):
 @login_required
 def quote_requests(request):
     quotes_list = QuoteRequest.objects.all().order_by('-created_at')
-    paginator = Paginator(quotes_list, 10)  # Show 10 quote requests per page
+    paginator = Paginator(quotes_list, 10)
     page_number = request.GET.get('page')
     quotes = paginator.get_page(page_number)
     return render(request, 'quote_requests.html', {'quotes': quotes})
